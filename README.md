@@ -208,7 +208,8 @@ Archived on Zenodo: **[doi:10.5281/zenodo.24414400](https://doi.org/10.5281/zeno
 |---|---|---|
 | `main.ndjson.zst` | 7 588 466 081 bytes | `048ac2be5f89c05ac1917f6785a471c56f2663491459e880cdafcfa259e928c2` (decompressed: `4301ce48…`) |
 | `lean.tar.gz` (original source; first published at `https://alpo.ge/lean.tar.gz.part01` … `part14`) | 239 275 554 bytes | `9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc` |
-| `SHA256SUMS`, `README.txt` | | |
+| `SHA256SUMS` | 238 bytes | `0bf3189364c5f3762dd42d7a13836b63cda1ba9ef6de6789bc28a299e30214e8` |
+| `README.txt` | 867 bytes | `e850c69b3a627a9e08dd04af45da15be8399a3003c2f0b842a3da30fa160b521` |
 
 `lib.tar.zst` (all 175 187 `.olean` files, 29.1 GB) is not archived. It is not needed for any of the checks,
 and its contents depend on the build machine (see §4).
