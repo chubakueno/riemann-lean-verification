@@ -1,0 +1,494 @@
+[2026-11-21 05:03:07] sha256 of the solution (may take a minute or two)
+  4301ce4828d397c728e87f3e6a1251aa42abe5e12809bb9e0b73cc3d33072e7e
+[2026-11-21 05:19:09] Building the challenge against Mathlib 0df444a3
+info: downloading https://releases.lean-lang.org/lean4/v4.33.1/lean-4.33.1-linux.tar.zst
+info: installing /home/chubakueno/.elan/toolchains/leanprover--lean4---v4.33.1
+info: challenge: no previous manifest, creating one from scratch
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4
+info: mathlib: checking out revision '0df444a360eaa60ab8c11dca51a86af692955474'
+info: toolchain not updated; already up-to-date
+info: plausible: cloning https://github.com/leanprover-community/plausible
+info: plausible: checking out revision 'b7eb3304aeae834b12dda98993a37f6a41f6f0bb'
+info: LeanSearchClient: cloning https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision '5f4d51b81cbd3f6b32b156bfad9056621a040404'
+info: importGraph: cloning https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision '16f02aa7642864af59f1ff0e384a015994db9118'
+info: proofwidgets: cloning https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision '4be2e3d5087eeb272cf5a8853b8f9dd025ef5957'
+info: aesop: cloning https://github.com/leanprover-community/aesop
+info: aesop: checking out revision '3448c0bcc5ce01b2d1546e483ec3620e32df3d0e'
+info: Qq: cloning https://github.com/leanprover-community/quote4
+info: Qq: checking out revision '92c15be17b7caf78c2ad767ec40f89052d908d81'
+info: batteries: cloning https://github.com/leanprover-community/batteries
+info: batteries: checking out revision '4488d40d070b9700d4d5a6aa342f0d40c31b2a2d'
+info: Cli: cloning https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision '6130a47896ce867c6a4a55373441e59e565bad0f'
+info: mathlib: running post-update hooks
+✔ [1/5] Built Cache.Cli (272ms)
+✔ [2/5] Built Cache.Lean (332ms)
+✔ [6/26] Built Cache.Cli:c.o (107ms)
+✔ [7/26] Built Cache.Lean:c.o (146ms)
+✔ [8/26] Built Cache.Infra (355ms)
+✔ [9/26] Built Cache.Infra:c.o (192ms)
+✔ [10/26] Built Batteries.Tactic.OpenPrivate (772ms)
+✔ [11/26] Built Cache.IO (1.3s)
+✔ [12/26] Built Batteries.Tactic.OpenPrivate:c.o (1.3s)
+✔ [13/26] Built Cache.Hashing (729ms)
+✔ [14/26] Built Cache.Hashing:c.o (523ms)
+✔ [15/26] Built Cache.IO:c.o (1.8s)
+✔ [16/26] Built Cache.Requests (1.9s)
+✔ [17/26] Built Cache.Marker (448ms)
+✔ [18/26] Built Cache.Marker:c.o (92ms)
+✔ [19/26] Built Cache.Query (542ms)
+✔ [20/26] Built Cache.Query:c.o (283ms)
+✔ [21/26] Built Cache.Warning (557ms)
+✔ [22/26] Built Cache.Warning:c.o (237ms)
+✔ [23/26] Built Cache.Main (1.2s)
+✔ [24/26] Built Cache.Requests:c.o (2.9s)
+✔ [25/26] Built Cache.Main:c.o (979ms)
+✔ [26/26] Built cache:exe (1.5s)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Attempting to download 8690 file(s) from leanprover-community/mathlib4 cache at https://lakecache.blob.core.windows.net/mathlib4-master
+Downloaded: 1 file(s) [attempted 1/8690 = 0%, 5 KB/s], Decompressed: 0[KDownloaded: 11 file(s) [attempted 11/8690 = 0%, 2 KB/s], Decompressed: 7[KDownloaded: 31 file(s) [attempted 31/8690 = 0%, 68 KB/s], Decompressed: 18[KDownloaded: 52 file(s) [attempted 52/8690 = 0%, 17 KB/s], Decompressed: 18[KDownloaded: 69 file(s) [attempted 69/8690 = 0%, 14 KB/s], Decompressed: 31[KDownloaded: 86 file(s) [attempted 86/8690 = 0%, 259 KB/s], Decompressed: 31[KDownloaded: 109 file(s) [attempted 109/8690 = 1%, 90 KB/s], Decompressed: 58[KDownloaded: 133 file(s) [attempted 133/8690 = 1%, 71 KB/s], Decompressed: 92[KDownloaded: 160 file(s) [attempted 160/8690 = 1%, 281 KB/s], Decompressed: 92[KDownloaded: 184 file(s) [attempted 184/8690 = 2%, 37 KB/s], Decompressed: 133[KDownloaded: 218 file(s) [attempted 218/8690 = 2%, 266 KB/s], Decompressed: 133[KDownloaded: 242 file(s) [attempted 242/8690 = 2%, 183 KB/s], Decompressed: 133[KDownloaded: 269 file(s) [attempted 269/8690 = 3%, 185 KB/s], Decompressed: 184[KDownloaded: 296 file(s) [attempted 296/8690 = 3%, 60 KB/s], Decompressed: 184[KDownloaded: 327 file(s) [attempted 327/8690 = 3%, 127 KB/s], Decompressed: 252[KDownloaded: 354 file(s) [attempted 354/8690 = 4%, 177 KB/s], Decompressed: 252[KDownloaded: 381 file(s) [attempted 381/8690 = 4%, 199 KB/s], Decompressed: 324[KDownloaded: 405 file(s) [attempted 405/8690 = 4%, 164 KB/s], Decompressed: 324[KDownloaded: 439 file(s) [attempted 439/8690 = 5%, 42 KB/s], Decompressed: 324[KDownloaded: 470 file(s) [attempted 470/8690 = 5%, 544 KB/s], Decompressed: 381[KDownloaded: 497 file(s) [attempted 497/8690 = 5%, 207 KB/s], Decompressed: 381[KDownloaded: 524 file(s) [attempted 524/8690 = 6%, 361 KB/s], Decompressed: 381[KDownloaded: 558 file(s) [attempted 558/8690 = 6%, 427 KB/s], Decompressed: 453[KDownloaded: 589 file(s) [attempted 589/8690 = 6%, 419 KB/s], Decompressed: 453[KDownloaded: 613 file(s) [attempted 613/8690 = 7%, 268 KB/s], Decompressed: 453[KDownloaded: 650 file(s) [attempted 650/8690 = 7%, 124 KB/s], Decompressed: 528[KDownloaded: 681 file(s) [attempted 681/8690 = 7%, 247 KB/s], Decompressed: 528[KDownloaded: 711 file(s) [attempted 711/8690 = 8%, 76 KB/s], Decompressed: 619[KDownloaded: 749 file(s) [attempted 749/8690 = 8%, 403 KB/s], Decompressed: 619[KDownloaded: 776 file(s) [attempted 776/8690 = 8%, 582 KB/s], Decompressed: 619[KDownloaded: 806 file(s) [attempted 806/8690 = 9%, 76 KB/s], Decompressed: 711[KDownloaded: 840 file(s) [attempted 840/8690 = 9%, 1474 KB/s], Decompressed: 711[KDownloaded: 861 file(s) [attempted 861/8690 = 9%, 71 KB/s], Decompressed: 711[KDownloaded: 898 file(s) [attempted 898/8690 = 10%, 785 KB/s], Decompressed: 711[KDownloaded: 925 file(s) [attempted 925/8690 = 10%, 155 KB/s], Decompressed: 806[KDownloaded: 959 file(s) [attempted 959/8690 = 11%, 99 KB/s], Decompressed: 806[KDownloaded: 993 file(s) [attempted 993/8690 = 11%, 178 KB/s], Decompressed: 806[KDownloaded: 1024 file(s) [attempted 1024/8690 = 11%, 171 KB/s], Decompressed: 905[KDownloaded: 1055 file(s) [attempted 1055/8690 = 12%, 222 KB/s], Decompressed: 905[KDownloaded: 1085 file(s) [attempted 1085/8690 = 12%, 81 KB/s], Decompressed: 905[KDownloaded: 1116 file(s) [attempted 1116/8690 = 12%, 198 KB/s], Decompressed: 1000[KDownloaded: 1150 file(s) [attempted 1150/8690 = 13%, 1256 KB/s], Decompressed: 1000[KDownloaded: 1177 file(s) [attempted 1177/8690 = 13%, 51 KB/s], Decompressed: 1000[KDownloaded: 1207 file(s) [attempted 1207/8690 = 13%, 214 KB/s], Decompressed: 1000[KDownloaded: 1235 file(s) [attempted 1235/8690 = 14%, 244 KB/s], Decompressed: 1099[KDownloaded: 1269 file(s) [attempted 1269/8690 = 14%, 195 KB/s], Decompressed: 1099[KDownloaded: 1320 file(s) [attempted 1320/8690 = 15%, 226 KB/s], Decompressed: 1208[KDownloaded: 1371 file(s) [attempted 1371/8690 = 15%, 219 KB/s], Decompressed: 1208[KDownloaded: 1421 file(s) [attempted 1421/8690 = 16%, 618 KB/s], Decompressed: 1208[KDownloaded: 1469 file(s) [attempted 1469/8690 = 16%, 60 KB/s], Decompressed: 1320[KDownloaded: 1513 file(s) [attempted 1513/8690 = 17%, 342 KB/s], Decompressed: 1320[KDownloaded: 1534 file(s) [attempted 1534/8690 = 17%, 234 KB/s], Decompressed: 1320[KDownloaded: 1568 file(s) [attempted 1568/8690 = 18%, 89 KB/s], Decompressed: 1462[KDownloaded: 1608 file(s) [attempted 1608/8690 = 18%, 165 KB/s], Decompressed: 1462[KDownloaded: 1629 file(s) [attempted 1629/8690 = 18%, 136 KB/s], Decompressed: 1462[KDownloaded: 1666 file(s) [attempted 1666/8690 = 19%, 115 KB/s], Decompressed: 1568[KDownloaded: 1707 file(s) [attempted 1707/8690 = 19%, 236 KB/s], Decompressed: 1568[KDownloaded: 1737 file(s) [attempted 1737/8690 = 19%, 1347 KB/s], Decompressed: 1652[KDownloaded: 1765 file(s) [attempted 1765/8690 = 20%, 124 KB/s], Decompressed: 1714[KDownloaded: 1805 file(s) [attempted 1805/8690 = 20%, 191 KB/s], Decompressed: 1714[KDownloaded: 1836 file(s) [attempted 1836/8690 = 21%, 320 KB/s], Decompressed: 1714[KDownloaded: 1866 file(s) [attempted 1866/8690 = 21%, 243 KB/s], Decompressed: 1765[KDownloaded: 1907 file(s) [attempted 1907/8690 = 21%, 335 KB/s], Decompressed: 1765[KDownloaded: 1931 file(s) [attempted 1931/8690 = 22%, 16 KB/s], Decompressed: 1843[KDownloaded: 1962 file(s) [attempted 1962/8690 = 22%, 87 KB/s], Decompressed: 1843[KDownloaded: 1992 file(s) [attempted 1992/8690 = 22%, 253 KB/s], Decompressed: 1914[KDownloaded: 2016 file(s) [attempted 2016/8690 = 23%, 233 KB/s], Decompressed: 1914[KDownloaded: 2057 file(s) [attempted 2057/8690 = 23%, 475 KB/s], Decompressed: 1968[KDownloaded: 2087 file(s) [attempted 2087/8690 = 24%, 92 KB/s], Decompressed: 1968[KDownloaded: 2114 file(s) [attempted 2114/8690 = 24%, 344 KB/s], Decompressed: 2040[KDownloaded: 2155 file(s) [attempted 2155/8690 = 24%, 476 KB/s], Decompressed: 2040[KDownloaded: 2186 file(s) [attempted 2186/8690 = 25%, 69 KB/s], Decompressed: 2114[KDownloaded: 2210 file(s) [attempted 2210/8690 = 25%, 596 KB/s], Decompressed: 2114[KDownloaded: 2244 file(s) [attempted 2244/8690 = 25%, 400 KB/s], Decompressed: 2172[KDownloaded: 2271 file(s) [attempted 2271/8690 = 26%, 193 KB/s], Decompressed: 2172[KDownloaded: 2305 file(s) [attempted 2305/8690 = 26%, 926 KB/s], Decompressed: 2237[KDownloaded: 2339 file(s) [attempted 2339/8690 = 26%, 682 KB/s], Decompressed: 2291[KDownloaded: 2369 file(s) [attempted 2369/8690 = 27%, 95 KB/s], Decompressed: 2291[KDownloaded: 2403 file(s) [attempted 2403/8690 = 27%, 62 KB/s], Decompressed: 2339[KDownloaded: 2437 file(s) [attempted 2437/8690 = 28%, 206 KB/s], Decompressed: 2339[KDownloaded: 2468 file(s) [attempted 2468/8690 = 28%, 209 KB/s], Decompressed: 2390[KDownloaded: 2498 file(s) [attempted 2498/8690 = 28%, 605 KB/s], Decompressed: 2441[KDownloaded: 2522 file(s) [attempted 2522/8690 = 29%, 419 KB/s], Decompressed: 2441[KDownloaded: 2556 file(s) [attempted 2556/8690 = 29%, 118 KB/s], Decompressed: 2488[KDownloaded: 2583 file(s) [attempted 2583/8690 = 29%, 497 KB/s], Decompressed: 2532[KDownloaded: 2617 file(s) [attempted 2617/8690 = 30%, 142 KB/s], Decompressed: 2532[KDownloaded: 2644 file(s) [attempted 2644/8690 = 30%, 494 KB/s], Decompressed: 2580[KDownloaded: 2675 file(s) [attempted 2675/8690 = 30%, 89 KB/s], Decompressed: 2580[KDownloaded: 2709 file(s) [attempted 2709/8690 = 31%, 867 KB/s], Decompressed: 2634[KDownloaded: 2736 file(s) [attempted 2736/8690 = 31%, 339 KB/s], Decompressed: 2634[KDownloaded: 2770 file(s) [attempted 2770/8690 = 31%, 28 KB/s], Decompressed: 2692[KDownloaded: 2804 file(s) [attempted 2804/8690 = 32%, 138 KB/s], Decompressed: 2692[KDownloaded: 2835 file(s) [attempted 2835/8690 = 32%, 45 KB/s], Decompressed: 2753[KDownloaded: 2869 file(s) [attempted 2869/8690 = 33%, 119 KB/s], Decompressed: 2814[KDownloaded: 2899 file(s) [attempted 2899/8690 = 33%, 66 KB/s], Decompressed: 2814[KDownloaded: 2933 file(s) [attempted 2933/8690 = 33%, 143 KB/s], Decompressed: 2869[KDownloaded: 2967 file(s) [attempted 2967/8690 = 34%, 32 KB/s], Decompressed: 2913[KDownloaded: 3001 file(s) [attempted 3001/8690 = 34%, 433 KB/s], Decompressed: 2913[KDownloaded: 3035 file(s) [attempted 3035/8690 = 34%, 777 KB/s], Decompressed: 2960[KDownloaded: 3069 file(s) [attempted 3069/8690 = 35%, 219 KB/s], Decompressed: 3011[KDownloaded: 3103 file(s) [attempted 3103/8690 = 35%, 700 KB/s], Decompressed: 3011[KDownloaded: 3127 file(s) [attempted 3127/8690 = 35%, 1053 KB/s], Decompressed: 3059[KDownloaded: 3157 file(s) [attempted 3157/8690 = 36%, 66 KB/s], Decompressed: 3106[KDownloaded: 3181 file(s) [attempted 3181/8690 = 36%, 128 KB/s], Decompressed: 3151[KDownloaded: 3219 file(s) [attempted 3219/8690 = 37%, 243 KB/s], Decompressed: 3151[KDownloaded: 3236 file(s) [attempted 3236/8690 = 37%, 142 KB/s], Decompressed: 3181[KDownloaded: 3276 file(s) [attempted 3276/8690 = 37%, 169 KB/s], Decompressed: 3222[KDownloaded: 3307 file(s) [attempted 3307/8690 = 38%, 298 KB/s], Decompressed: 3263[KDownloaded: 3334 file(s) [attempted 3334/8690 = 38%, 443 KB/s], Decompressed: 3293[KDownloaded: 3378 file(s) [attempted 3378/8690 = 38%, 115 KB/s], Decompressed: 3293[KDownloaded: 3402 file(s) [attempted 3402/8690 = 39%, 132 KB/s], Decompressed: 3334[KDownloaded: 3433 file(s) [attempted 3433/8690 = 39%, 38 KB/s], Decompressed: 3334[KDownloaded: 3463 file(s) [attempted 3463/8690 = 39%, 348 KB/s], Decompressed: 3392[KDownloaded: 3494 file(s) [attempted 3494/8690 = 40%, 263 KB/s], Decompressed: 3392[KDownloaded: 3534 file(s) [attempted 3534/8690 = 40%, 348 KB/s], Decompressed: 3450[KDownloaded: 3551 file(s) [attempted 3551/8690 = 40%, 69 KB/s], Decompressed: 3450[KDownloaded: 3592 file(s) [attempted 3592/8690 = 41%, 18 KB/s], Decompressed: 3500[KDownloaded: 3636 file(s) [attempted 3636/8690 = 41%, 180 KB/s], Decompressed: 3500[KDownloaded: 3653 file(s) [attempted 3653/8690 = 42%, 18 KB/s], Decompressed: 3500[KDownloaded: 3691 file(s) [attempted 3691/8690 = 42%, 72 KB/s], Decompressed: 3585[KDownloaded: 3718 file(s) [attempted 3718/8690 = 42%, 42 KB/s], Decompressed: 3585[KDownloaded: 3742 file(s) [attempted 3742/8690 = 43%, 301 KB/s], Decompressed: 3585[KDownloaded: 3786 file(s) [attempted 3786/8690 = 43%, 521 KB/s], Decompressed: 3681[KDownloaded: 3802 file(s) [attempted 3802/8690 = 43%, 354 KB/s], Decompressed: 3681[KDownloaded: 3840 file(s) [attempted 3840/8690 = 44%, 202 KB/s], Decompressed: 3681[KDownloaded: 3874 file(s) [attempted 3874/8690 = 44%, 1047 KB/s], Decompressed: 3681[KDownloaded: 3901 file(s) [attempted 3901/8690 = 44%, 195 KB/s], Decompressed: 3782[KDownloaded: 3942 file(s) [attempted 3942/8690 = 45%, 334 KB/s], Decompressed: 3782[KDownloaded: 3980 file(s) [attempted 3980/8690 = 45%, 947 KB/s], Decompressed: 3782[KDownloaded: 4007 file(s) [attempted 4007/8690 = 46%, 774 KB/s], Decompressed: 3884[KDownloaded: 4041 file(s) [attempted 4041/8690 = 46%, 32 KB/s], Decompressed: 3884[KDownloaded: 4071 file(s) [attempted 4071/8690 = 46%, 83 KB/s], Decompressed: 3884[KDownloaded: 4098 file(s) [attempted 4098/8690 = 47%, 1309 KB/s], Decompressed: 3986[KDownloaded: 4109 file(s) [attempted 4109/8690 = 47%, 529 KB/s], Decompressed: 3986[KDownloaded: 4156 file(s) [attempted 4156/8690 = 47%, 564 KB/s], Decompressed: 4081[KDownloaded: 4207 file(s) [attempted 4207/8690 = 48%, 1039 KB/s], Decompressed: 4081[KDownloaded: 4255 file(s) [attempted 4255/8690 = 48%, 446 KB/s], Decompressed: 4081[KDownloaded: 4306 file(s) [attempted 4306/8690 = 49%, 245 KB/s], Decompressed: 4156[KDownloaded: 4353 file(s) [attempted 4353/8690 = 50%, 201 KB/s], Decompressed: 4156[KDownloaded: 4404 file(s) [attempted 4404/8690 = 50%, 489 KB/s], Decompressed: 4258[KDownloaded: 4455 file(s) [attempted 4455/8690 = 51%, 168 KB/s], Decompressed: 4258[KDownloaded: 4499 file(s) [attempted 4499/8690 = 51%, 516 KB/s], Decompressed: 4258[KDownloaded: 4513 file(s) [attempted 4513/8690 = 51%, 165 KB/s], Decompressed: 4367[KDownloaded: 4554 file(s) [attempted 4554/8690 = 52%, 510 KB/s], Decompressed: 4367[KDownloaded: 4594 file(s) [attempted 4594/8690 = 52%, 100 KB/s], Decompressed: 4367[KDownloaded: 4611 file(s) [attempted 4611/8690 = 53%, 68 KB/s], Decompressed: 4367[KDownloaded: 4652 file(s) [attempted 4652/8690 = 53%, 169 KB/s], Decompressed: 4503[KDownloaded: 4690 file(s) [attempted 4690/8690 = 53%, 249 KB/s], Decompressed: 4503[KDownloaded: 4713 file(s) [attempted 4713/8690 = 54%, 163 KB/s], Decompressed: 4503[KDownloaded: 4751 file(s) [attempted 4751/8690 = 54%, 119 KB/s], Decompressed: 4503[KDownloaded: 4785 file(s) [attempted 4785/8690 = 55%, 600 KB/s], Decompressed: 4645[KDownloaded: 4808 file(s) [attempted 4808/8690 = 55%, 425 KB/s], Decompressed: 4645[KDownloaded: 4846 file(s) [attempted 4846/8690 = 55%, 139 KB/s], Decompressed: 4645[KDownloaded: 4870 file(s) [attempted 4870/8690 = 56%, 582 KB/s], Decompressed: 4645[KDownloaded: 4907 file(s) [attempted 4907/8690 = 56%, 109 KB/s], Decompressed: 4774[KDownloaded: 4931 file(s) [attempted 4931/8690 = 56%, 715 KB/s], Decompressed: 4774[KDownloaded: 4965 file(s) [attempted 4965/8690 = 57%, 93 KB/s], Decompressed: 4774[KDownloaded: 5002 file(s) [attempted 5002/8690 = 57%, 451 KB/s], Decompressed: 4774[KDownloaded: 5019 file(s) [attempted 5019/8690 = 57%, 396 KB/s], Decompressed: 4893[KDownloaded: 5060 file(s) [attempted 5060/8690 = 58%, 657 KB/s], Decompressed: 4893[KDownloaded: 5087 file(s) [attempted 5087/8690 = 58%, 75 KB/s], Decompressed: 4893[KDownloaded: 5118 file(s) [attempted 5118/8690 = 58%, 379 KB/s], Decompressed: 5012[KDownloaded: 5158 file(s) [attempted 5158/8690 = 59%, 167 KB/s], Decompressed: 5012[KDownloaded: 5182 file(s) [attempted 5182/8690 = 59%, 423 KB/s], Decompressed: 5012[KDownloaded: 5219 file(s) [attempted 5219/8690 = 60%, 47 KB/s], Decompressed: 5118[KDownloaded: 5260 file(s) [attempted 5260/8690 = 60%, 338 KB/s], Decompressed: 5118[KDownloaded: 5276 file(s) [attempted 5276/8690 = 60%, 347 KB/s], Decompressed: 5118[KDownloaded: 5318 file(s) [attempted 5318/8690 = 61%, 1088 KB/s], Decompressed: 5118[KDownloaded: 5352 file(s) [attempted 5352/8690 = 61%, 89 KB/s], Decompressed: 5219[KDownloaded: 5372 file(s) [attempted 5372/8690 = 61%, 664 KB/s], Decompressed: 5219[KDownloaded: 5417 file(s) [attempted 5417/8690 = 62%, 96 KB/s], Decompressed: 5321[KDownloaded: 5444 file(s) [attempted 5444/8690 = 62%, 207 KB/s], Decompressed: 5321[KDownloaded: 5471 file(s) [attempted 5471/8690 = 62%, 19 KB/s], Decompressed: 5321[KDownloaded: 5515 file(s) [attempted 5515/8690 = 63%, 122 KB/s], Decompressed: 5417[KDownloaded: 5546 file(s) [attempted 5546/8690 = 63%, 594 KB/s], Decompressed: 5417[KDownloaded: 5569 file(s) [attempted 5569/8690 = 64%, 161 KB/s], Decompressed: 5505[KDownloaded: 5607 file(s) [attempted 5607/8690 = 64%, 574 KB/s], Decompressed: 5505[KDownloaded: 5631 file(s) [attempted 5631/8690 = 64%, 444 KB/s], Decompressed: 5505[KDownloaded: 5668 file(s) [attempted 5668/8690 = 65%, 200 KB/s], Decompressed: 5569[KDownloaded: 5695 file(s) [attempted 5695/8690 = 65%, 371 KB/s], Decompressed: 5637[KDownloaded: 5726 file(s) [attempted 5726/8690 = 65%, 126 KB/s], Decompressed: 5637[KDownloaded: 5756 file(s) [attempted 5756/8690 = 66%, 732 KB/s], Decompressed: 5637[KDownloaded: 5790 file(s) [attempted 5790/8690 = 66%, 216 KB/s], Decompressed: 5695[KDownloaded: 5817 file(s) [attempted 5817/8690 = 66%, 1051 KB/s], Decompressed: 5695[KDownloaded: 5841 file(s) [attempted 5841/8690 = 67%, 308 KB/s], Decompressed: 5763[KDownloaded: 5875 file(s) [attempted 5875/8690 = 67%, 292 KB/s], Decompressed: 5763[KDownloaded: 5906 file(s) [attempted 5906/8690 = 67%, 200 KB/s], Decompressed: 5824[KDownloaded: 5940 file(s) [attempted 5940/8690 = 68%, 78 KB/s], Decompressed: 5824[KDownloaded: 5977 file(s) [attempted 5977/8690 = 68%, 485 KB/s], Decompressed: 5889[KDownloaded: 6008 file(s) [attempted 6008/8690 = 69%, 41 KB/s], Decompressed: 5889[KDownloaded: 6038 file(s) [attempted 6038/8690 = 69%, 149 KB/s], Decompressed: 5960[KDownloaded: 6072 file(s) [attempted 6072/8690 = 69%, 251 KB/s], Decompressed: 5960[KDownloaded: 6103 file(s) [attempted 6103/8690 = 70%, 27 KB/s], Decompressed: 5960[KDownloaded: 6133 file(s) [attempted 6133/8690 = 70%, 443 KB/s], Decompressed: 6031[KDownloaded: 6171 file(s) [attempted 6171/8690 = 71%, 135 KB/s], Decompressed: 6031[KDownloaded: 6205 file(s) [attempted 6205/8690 = 71%, 63 KB/s], Decompressed: 6116[KDownloaded: 6235 file(s) [attempted 6235/8690 = 71%, 122 KB/s], Decompressed: 6116[KDownloaded: 6269 file(s) [attempted 6269/8690 = 72%, 898 KB/s], Decompressed: 6116[KDownloaded: 6300 file(s) [attempted 6300/8690 = 72%, 99 KB/s], Decompressed: 6201[KDownloaded: 6330 file(s) [attempted 6330/8690 = 72%, 34 KB/s], Decompressed: 6201[KDownloaded: 6364 file(s) [attempted 6364/8690 = 73%, 119 KB/s], Decompressed: 6201[KDownloaded: 6391 file(s) [attempted 6391/8690 = 73%, 202 KB/s], Decompressed: 6293[KDownloaded: 6425 file(s) [attempted 6425/8690 = 73%, 51 KB/s], Decompressed: 6293[KDownloaded: 6459 file(s) [attempted 6459/8690 = 74%, 126 KB/s], Decompressed: 6293[KDownloaded: 6487 file(s) [attempted 6487/8690 = 74%, 94 KB/s], Decompressed: 6378[KDownloaded: 6527 file(s) [attempted 6527/8690 = 75%, 712 KB/s], Decompressed: 6378[KDownloaded: 6548 file(s) [attempted 6548/8690 = 75%, 762 KB/s], Decompressed: 6378[KDownloaded: 6585 file(s) [attempted 6585/8690 = 75%, 285 KB/s], Decompressed: 6473[KDownloaded: 6622 file(s) [attempted 6622/8690 = 76%, 888 KB/s], Decompressed: 6473[KDownloaded: 6643 file(s) [attempted 6643/8690 = 76%, 466 KB/s], Decompressed: 6473[KDownloaded: 6680 file(s) [attempted 6680/8690 = 76%, 546 KB/s], Decompressed: 6473[KDownloaded: 6704 file(s) [attempted 6704/8690 = 77%, 183 KB/s], Decompressed: 6473[KDownloaded: 6741 file(s) [attempted 6741/8690 = 77%, 431 KB/s], Decompressed: 6585[KDownloaded: 6782 file(s) [attempted 6782/8690 = 78%, 155 KB/s], Decompressed: 6585[KDownloaded: 6809 file(s) [attempted 6809/8690 = 78%, 634 KB/s], Decompressed: 6585[KDownloaded: 6843 file(s) [attempted 6843/8690 = 78%, 320 KB/s], Decompressed: 6707[KDownloaded: 6877 file(s) [attempted 6877/8690 = 79%, 256 KB/s], Decompressed: 6707[KDownloaded: 6911 file(s) [attempted 6911/8690 = 79%, 191 KB/s], Decompressed: 6707[KDownloaded: 6942 file(s) [attempted 6942/8690 = 79%, 36 KB/s], Decompressed: 6707[KDownloaded: 6979 file(s) [attempted 6979/8690 = 80%, 56 KB/s], Decompressed: 6830[KDownloaded: 7013 file(s) [attempted 7013/8690 = 80%, 62 KB/s], Decompressed: 6830[KDownloaded: 7051 file(s) [attempted 7051/8690 = 81%, 61 KB/s], Decompressed: 6830[KDownloaded: 7085 file(s) [attempted 7085/8690 = 81%, 136 KB/s], Decompressed: 6949[KDownloaded: 7115 file(s) [attempted 7115/8690 = 81%, 282 KB/s], Decompressed: 6949[KDownloaded: 7159 file(s) [attempted 7159/8690 = 82%, 129 KB/s], Decompressed: 6949[KDownloaded: 7186 file(s) [attempted 7186/8690 = 82%, 1202 KB/s], Decompressed: 7064[KDownloaded: 7217 file(s) [attempted 7217/8690 = 83%, 153 KB/s], Decompressed: 7064[KDownloaded: 7261 file(s) [attempted 7261/8690 = 83%, 458 KB/s], Decompressed: 7064[KDownloaded: 7265 file(s) [attempted 7265/8690 = 83%, 790 KB/s], Decompressed: 7064[KDownloaded: 7316 file(s) [attempted 7316/8690 = 84%, 740 KB/s], Decompressed: 7183[KDownloaded: 7366 file(s) [attempted 7366/8690 = 84%, 1213 KB/s], Decompressed: 7183[KDownloaded: 7414 file(s) [attempted 7414/8690 = 85%, 44 KB/s], Decompressed: 7183[KDownloaded: 7465 file(s) [attempted 7465/8690 = 85%, 240 KB/s], Decompressed: 7316[KDownloaded: 7513 file(s) [attempted 7513/8690 = 86%, 127 KB/s], Decompressed: 7316[KDownloaded: 7536 file(s) [attempted 7536/8690 = 86%, 92 KB/s], Decompressed: 7316[KDownloaded: 7567 file(s) [attempted 7567/8690 = 87%, 35 KB/s], Decompressed: 7316[KDownloaded: 7611 file(s) [attempted 7611/8690 = 87%, 75 KB/s], Decompressed: 7316[KDownloaded: 7631 file(s) [attempted 7631/8690 = 87%, 80 KB/s], Decompressed: 7316[KDownloaded: 7665 file(s) [attempted 7665/8690 = 88%, 56 KB/s], Decompressed: 7316[KDownloaded: 7696 file(s) [attempted 7696/8690 = 88%, 69 KB/s], Decompressed: 7316[KDownloaded: 7723 file(s) [attempted 7723/8690 = 88%, 707 KB/s], Decompressed: 7316[KDownloaded: 7757 file(s) [attempted 7757/8690 = 89%, 695 KB/s], Decompressed: 7316[KDownloaded: 7788 file(s) [attempted 7788/8690 = 89%, 172 KB/s], Decompressed: 7316[KDownloaded: 7818 file(s) [attempted 7818/8690 = 89%, 35 KB/s], Decompressed: 7316[KDownloaded: 7852 file(s) [attempted 7852/8690 = 90%, 153 KB/s], Decompressed: 7316[KDownloaded: 7883 file(s) [attempted 7883/8690 = 90%, 63 KB/s], Decompressed: 7316[KDownloaded: 7913 file(s) [attempted 7913/8690 = 91%, 314 KB/s], Decompressed: 7316[KDownloaded: 7944 file(s) [attempted 7944/8690 = 91%, 421 KB/s], Decompressed: 7316[KDownloaded: 7971 file(s) [attempted 7971/8690 = 91%, 258 KB/s], Decompressed: 7316[KDownloaded: 7998 file(s) [attempted 7998/8690 = 92%, 104 KB/s], Decompressed: 7316[KDownloaded: 8049 file(s) [attempted 8049/8690 = 92%, 481 KB/s], Decompressed: 7458[KDownloaded: 8097 file(s) [attempted 8097/8690 = 93%, 492 KB/s], Decompressed: 7458[KDownloaded: 8148 file(s) [attempted 8148/8690 = 93%, 433 KB/s], Decompressed: 7458[KDownloaded: 8199 file(s) [attempted 8199/8690 = 94%, 1178 KB/s], Decompressed: 7458[KDownloaded: 8246 file(s) [attempted 8246/8690 = 94%, 158 KB/s], Decompressed: 7458[KDownloaded: 8290 file(s) [attempted 8290/8690 = 95%, 591 KB/s], Decompressed: 7458[KDownloaded: 8311 file(s) [attempted 8311/8690 = 95%, 163 KB/s], Decompressed: 7458[KDownloaded: 8348 file(s) [attempted 8348/8690 = 96%, 400 KB/s], Decompressed: 7458[KDownloaded: 8389 file(s) [attempted 8389/8690 = 96%, 127 KB/s], Decompressed: 7458[KDownloaded: 8396 file(s) [attempted 8396/8690 = 96%, 38 KB/s], Decompressed: 7458[KDownloaded: 8447 file(s) [attempted 8447/8690 = 97%, 321 KB/s], Decompressed: 7458[KDownloaded: 8498 file(s) [attempted 8498/8690 = 97%, 61 KB/s], Decompressed: 7458[KDownloaded: 8545 file(s) [attempted 8545/8690 = 98%, 219 KB/s], Decompressed: 8049[KDownloaded: 8589 file(s) [attempted 8589/8690 = 98%, 167 KB/s], Decompressed: 8049[KDownloaded: 8613 file(s) [attempted 8613/8690 = 99%, 125 KB/s], Decompressed: 8049[KDownloaded: 8647 file(s) [attempted 8647/8690 = 99%, 321 KB/s], Decompressed: 8049[KDownloaded: 8685 file(s) [attempted 8685/8690 = 99%, 346 KB/s], Decompressed: 8049[KDownloaded: 8688 file(s) [attempted 8688/8690 = 99%, 54 KB/s], Decompressed: 8049[KDownloaded: 8690 file(s) [attempted 8690/8690 = 100%, 54 KB/s], Decompressed: 8049[K
+Decompressed 8690 file(s)
+Already decompressed 8690 file(s)
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 8690 file(s)
+⚠ [8706/8707] Built Challenge (5.1s)
+warning: Challenge.lean:16:8: declaration uses `sorry`
+warning: Challenge.lean:33:8: declaration uses `sorry`
+warning: Challenge.lean:35:8: declaration uses `sorry`
+warning: Challenge.lean:37:8: declaration uses `sorry`
+warning: Challenge.lean:39:8: declaration uses `sorry`
+Build completed successfully (8707 jobs).
+[2026-11-21 05:21:39] Building lean4export 15f6055e299ad5b89345e533cc2192f4cc00f659 with Lean v4.33.1
+✔ [2/6] Built Export (2.4s)
+✔ [3/6] Built Main (732ms)
+✔ [4/6] Built Main:c.o (181ms)
+✔ [5/6] Built Export:c.o (2.3s)
+✔ [6/6] Built lean4export:exe (1.2s)
+Build completed successfully (6 jobs).
+[2026-11-21 05:21:49] Exporting the challenge
+-rw-r--r-- 1 chubakueno chubakueno 350794407 Nov 21 05:22 /home/chubakueno/rh-verify/challenge.ndjson
+  38ae485659b1b1019061746ece9d2cf404765a1cca47eba618798970edaf2f2a
+[2026-11-21 05:22:17] Building con-leche 11d8ff13c86675e6ba4b6ca6cd1e4986154516d9
+info: downloading https://releases.lean-lang.org/lean4/v4.36.0/lean-4.36.0-linux.tar.zst
+info: installing /home/chubakueno/.elan/toolchains/leanprover--lean4---v4.36.0
+✔ [1/387] Built «con-leche»/nat_hash.o (102ms)
+✔ [2/387] Built «con-leche»/libconleche_native (23ms)
+✔ [4/593] Built ConLeche.Kernel.Error (377ms)
+✔ [6/593] Built ConLeche.Kernel.PtrDecEq (317ms)
+✔ [8/593] Built ConLeche.Kernel.Exclusive (298ms)
+✔ [10/593] Built ConLeche.Kernel.NatHash (288ms)
+✔ [12/593] Built ConLeche.Kernel.NatHash:c.o (148ms)
+✔ [13/593] Built ConLeche.Frontend.Pace (411ms)
+✔ [15/593] Built ConLeche.Verify.ExceptBind (338ms)
+✔ [17/593] Built ConLeche.Kernel.PtrDecEq:c.o (164ms)
+✔ [18/593] Built ConLeche.Kernel.Exclusive:c.o (139ms)
+✔ [19/593] Built ConLeche.Kernel.Error:c.o (220ms)
+✔ [20/593] Built ConLeche.Verify.ExceptBind:c.o (116ms)
+✔ [21/593] Built ConLeche.Frontend.Export (344ms)
+✔ [23/593] Built ConLeche.Frontend.Pace:c.o (319ms)
+✔ [24/593] Built ConLeche.Driver.Schedule.Proc (632ms)
+✔ [26/593] Built ConLeche.Frontend.Export:c.o (135ms)
+✔ [27/593] Built ConLeche.Frontend.Olean.Progress (449ms)
+✔ [29/593] Built ConLeche.Driver.Schedule.Engine (723ms)
+✔ [31/593] Built ConLeche.Kernel.Name (777ms)
+✔ [33/593] Built ConLeche.Modular.Generic (971ms)
+✔ [35/593] Built ConLeche.Driver.Stats (901ms)
+✔ [37/593] Built ConLecheNative:shared (711ms)
+✔ [38/593] Built ConLeche.Frontend.CheckerIO (1.1s)
+✔ [40/593] Built ConLeche.Modular.Generic:c.o (108ms)
+✔ [41/593] Built ConLeche.Frontend.Olean.Progress:c.o (298ms)
+✔ [42/593] Built ConLeche.Driver.Schedule.Proc:c.o (504ms)
+✔ [43/593] Built ConLeche.Frontend.Scan.Types (1.6s)
+✔ [45/593] Built ConLeche.Kernel.Name:c.o (503ms)
+✔ [46/593] Built ConLeche.Kernel.PropWhen (567ms)
+✔ [48/593] Built ConLeche.Driver.Stats:c.o (685ms)
+✔ [49/593] Built ConLeche.Driver.Schedule.Engine:c.o (886ms)
+✔ [50/593] Built ConLeche.Kernel.PropWhen:c.o (299ms)
+✔ [51/593] Built ConLeche.Frontend.Olean.Region (1.2s)
+✔ [53/593] Built ConLeche.Frontend.CheckerIO:c.o (1.2s)
+✔ [54/593] Built ConLeche.Verify.Frontend.ModelIO (1.3s)
+✔ [56/593] Built ConLeche.Verify.Frontend.ModelIO:c.o (269ms)
+✔ [57/593] Built ConLeche.Frontend.Scan.Types:c.o (1.2s)
+✔ [58/593] Built ConLeche.Frontend.Olean.Region:c.o (802ms)
+✔ [59/593] Built ConLeche.Kernel.Expr (2.7s)
+✔ [61/593] Built ConLeche.Cached.ExprNodes (344ms)
+✔ [63/593] Built ConLeche.Kernel.NatOpPinSet (367ms)
+✔ [65/593] Built ConLeche.Kernel.Inductives.FieldTele (394ms)
+✔ [67/593] Built ConLeche.Cached.ExprNodes:c.o (99ms)
+✔ [68/593] Built ConLeche.Kernel.NatOpPinSet:c.o (92ms)
+✔ [69/593] Built ConLeche.Kernel.Inductives.FieldTele:c.o (192ms)
+✔ [70/593] Built ConLeche.Kernel.Env (1.4s)
+✔ [72/593] Built ConLeche.Kernel.Expr:c.o (1.6s)
+✔ [73/593] Built ConLeche.Frontend.ParseResult (326ms)
+✔ [75/593] Built ConLeche.Kernel.Basis.Names (313ms)
+✔ [77/593] Built ConLeche.Frontend.ParseResult:c.o (132ms)
+✔ [78/593] Built ConLeche.PinGen.Dump (1.9s)
+✔ [80/593] Built ConLeche.Kernel.Basis.Names:c.o (193ms)
+✔ [81/593] Built ConLeche.Kernel.Basis.Builder (369ms)
+✔ [83/593] Built ConLeche.Driver.Schedule.Worker (745ms)
+✔ [85/593] Built ConLeche.Kernel.Basis.Builder:c.o (191ms)
+✔ [86/593] Built ConLeche.Kernel.TrustPins (329ms)
+✔ [88/593] Built ConLeche.Kernel.Basis.Eq (393ms)
+✔ [90/593] Built ConLeche.Kernel.Basis.Empty (465ms)
+✔ [92/593] Built ConLeche.Kernel.Basis.False (400ms)
+✔ [94/593] Built ConLeche.Kernel.Basis.And (489ms)
+✔ [96/593] Built ConLeche.Kernel.Basis.Nat (531ms)
+✔ [98/593] Built ConLeche.Kernel.TrustPins:c.o (185ms)
+✔ [99/593] Built ConLeche.Kernel.Basis.Quot (692ms)
+✔ [101/593] Built ConLeche.Kernel.Basis.Empty:c.o (181ms)
+✔ [102/593] Built ConLeche.Kernel.Basis.False:c.o (216ms)
+✔ [103/593] Built ConLeche.Kernel.StdAxioms (676ms)
+✔ [105/593] Built ConLeche.Kernel.Basis.Eq:c.o (253ms)
+✔ [106/593] Built ConLeche.Kernel.Basis.Nat:c.o (294ms)
+✔ [107/593] Built ConLeche.Kernel.Basis.And:c.o (311ms)
+✔ [108/593] Built ConLeche.Driver.Schedule.Log (736ms)
+✔ [110/593] Built ConLeche.Kernel.Basis.Quot:c.o (326ms)
+✔ [111/593] Built ConLeche.Kernel.Env:c.o (1.9s)
+✔ [112/593] Built ConLeche.Kernel.StdAxioms:c.o (391ms)
+✔ [113/593] Built ConLeche.Driver.Schedule.Worker:c.o (939ms)
+✔ [114/593] Built ConLeche.Frontend.Olean.Spec (2.1s)
+✔ [116/593] Built ConLeche.Frontend.Olean.Header (495ms)
+✔ [118/593] Built ConLeche.Driver.Schedule.Log:c.o (789ms)
+✔ [119/593] Built ConLeche.Kernel.Canon (2.6s)
+✔ [121/593] Built ConLeche.Frontend.Olean.Header:c.o (335ms)
+✔ [122/593] Built ConLeche.Frontend.Olean.Fast (1.6s)
+✔ [124/593] Built ConLeche.Kernel.Canon:c.o (1.3s)
+✔ [125/593] Built ConLeche.PinGen.Dump:c.o (3.5s)
+✔ [126/593] Built ConLeche.Frontend.Olean.Sparse (1.1s)
+✔ [128/593] Built ConLeche.Kernel.Level (6.3s)
+✔ [130/593] Built ConLeche.Frontend.Olean.Reads (692ms)
+✔ [132/593] Built ConLeche.Kernel.Basis (559ms)
+✔ [134/593] Built ConLeche.Frontend.Olean.View (924ms)
+✔ [136/593] Built ConLeche.Kernel.Level:c.o (1.4s)
+✔ [137/593] Built ConLeche.Kernel.Basis:c.o (1.0s)
+✔ [138/593] Built ConLeche.Frontend.Olean.Reads:c.o (1.3s)
+✔ [139/593] Built ConLeche.Verify.Level (1.0s)
+✔ [141/593] Built ConLeche.Frontend.Olean.View:c.o (702ms)
+✔ [142/593] Built ConLeche.Frontend.Olean.Lazy (1.2s)
+✔ [144/593] Built ConLeche.Frontend.Olean.Spec:c.o (5.6s)
+✔ [145/593] Built ConLeche.Verify.Level:c.o (931ms)
+✔ [146/593] Built ConLeche.Frontend.Olean.Sparse:c.o (3.2s)
+✔ [147/593] Built ConLeche.Frontend.Olean.Merge (488ms)
+✔ [149/593] Built ConLeche.Frontend.Olean.Module (770ms)
+✔ [151/593] Built ConLeche.Kernel.ExprOps (3.5s)
+✔ [153/593] Built ConLeche.Frontend.Olean.Merge:c.o (451ms)
+✔ [154/593] Built ConLeche.Verify.Inductives.NestedRead (397ms)
+✔ [156/593] Built ConLeche.Verify.InstList (523ms)
+✔ [158/593] Built ConLeche.Verify.Inductives.NestedRead:c.o (154ms)
+✔ [159/593] Built ConLeche.Kernel.PropRead (666ms)
+✔ [161/593] Built ConLeche.Verify.InstList:c.o (135ms)
+✔ [162/593] Built ConLeche.Kernel.Inductives.IotaEq (701ms)
+✔ [164/593] Built ConLeche.Kernel.PropRead:c.o (611ms)
+✔ [165/593] Built ConLeche.Frontend.Olean.Files (1.5s)
+✔ [167/593] Built ConLeche.Kernel.Inductives.IotaEq:c.o (760ms)
+✔ [168/593] Built ConLeche.Frontend.Olean.Module:c.o (1.7s)
+✔ [169/593] Built ConLeche.Frontend.Olean.Snapshot (481ms)
+✔ [171/593] Built ConLeche.Frontend.Olean.Closure (581ms)
+✔ [173/593] Built ConLeche.Frontend.Olean.Snapshot:c.o (127ms)
+✔ [174/593] Built ConLeche.Driver.CmpReq (351ms)
+✔ [176/593] Built ConLeche.Kernel.CoreDefs (1.7s)
+✔ [178/593] Built ConLeche.Verify.Shift (2.3s)
+✔ [180/593] Built ConLeche.Frontend.Olean.Lazy:c.o (3.2s)
+✔ [181/593] Built ConLeche.Frontend.Olean.Closure:c.o (363ms)
+✔ [182/593] Built ConLeche.Driver.CmpReq:c.o (125ms)
+✔ [183/593] Built ConLeche.Frontend.Olean.Emit (2.8s)
+✔ [185/593] Built ConLeche.Frontend.Olean.Files:c.o (1.2s)
+✔ [186/593] Built ConLeche.Kernel.ExprOps:c.o (2.6s)
+✔ [187/593] Built ConLeche.Verify.Cached.Erase (415ms)
+✔ [189/593] Built ConLeche.Frontend.Olean.Levels (883ms)
+✔ [191/593] Built ConLeche.Verify.Shift:c.o (603ms)
+✔ [192/593] Built ConLeche.Verify.Cached.Erase:c.o (238ms)
+✔ [193/593] Built ConLeche.Verify.AbstractRange (858ms)
+✔ [195/593] Built ConLeche.Verify.AbstractRange:c.o (100ms)
+✔ [196/593] Built ConLeche.Frontend.Scan.Fast (15s)
+✔ [198/593] Built ConLeche.Frontend.Olean.Levels:c.o (857ms)
+✔ [199/593] Built ConLeche.Frontend.Olean.Index (1.3s)
+✔ [201/593] Built ConLeche.Frontend.Olean.Emit:c.o (2.0s)
+✔ [202/593] Built ConLeche.Verify.PropRead (2.3s)
+✔ [204/593] Built ConLeche.Kernel.CoreDefs:c.o (2.3s)
+✔ [205/593] Built ConLeche.Kernel.Core (2.5s)
+✔ [207/593] Built ConLeche.Verify.PropRead:c.o (437ms)
+✔ [208/593] Built ConLeche.Kernel.TrustAxioms (648ms)
+✔ [210/593] Built ConLeche.Verify.StrLitExpr (578ms)
+✔ [212/593] Built ConLeche.Kernel.Inductives.StructParts (709ms)
+✔ [214/593] Built ConLeche.Verify.StrLitExpr:c.o (222ms)
+✔ [215/593] Built ConLeche.Frontend.Olean.Index:c.o (1.6s)
+✔ [216/593] Built ConLeche.Frontend.NatOpGround (1.1s)
+✔ [218/593] Built ConLeche.Kernel.TrustAxioms:c.o (423ms)
+✔ [219/593] Built ConLeche.Kernel.Inductives.StructParts:c.o (366ms)
+✔ [220/593] Built ConLeche.Kernel.TypeChecker (1.2s)
+✔ [222/593] Built ConLeche.Kernel.Inductives.SumParts (556ms)
+✔ [224/593] Built ConLeche.Kernel.FEnv (1.5s)
+✔ [226/593] Built ConLeche.Frontend.Prepare (487ms)
+✔ [228/593] Built ConLeche.Kernel.Inductives.SumParts:c.o (320ms)
+✔ [229/593] Built ConLeche.Verify.EnvWF (1.7s)
+✔ [231/593] Built ConLeche.Frontend.Prepare:c.o (248ms)
+✔ [232/593] Built ConLeche.Verify.EnvWF:c.o (439ms)
+✔ [233/593] Built ConLeche.Kernel.CoreIO (995ms)
+✔ [235/593] Built ConLeche.Frontend.NatOpGround:c.o (1.1s)
+✔ [236/593] Built ConLeche.Kernel.FEnv:c.o (1.1s)
+✔ [237/593] Built ConLeche.Verify.Subst (5.5s)
+✔ [239/593] Built ConLeche.Verify.Knot (1.3s)
+✔ [241/593] Built ConLeche.Verify.InstLevels (705ms)
+✔ [243/593] Built ConLeche.Verify.Subst:c.o (638ms)
+✔ [244/593] Built ConLeche.Verify.InstLevels:c.o (177ms)
+✔ [245/593] Built ConLeche.Verify.Knot:c.o (478ms)
+✔ [246/593] Built ConLeche.Verify.Abstract (1.1s)
+✔ [248/593] Built ConLeche.Frontend.Scan.Naive (5.9s)
+✔ [250/593] Built ConLeche.Verify.Abstract:c.o (258ms)
+✔ [251/593] Built ConLeche.Verify.Leaves (729ms)
+✔ [253/593] Built ConLeche.Verify.Leaves:c.o (143ms)
+✔ [254/593] Built ConLeche.Frontend.Scan.Equiv.Kit (965ms)
+✔ [256/593] Built ConLeche.Kernel.Core:c.o (5.8s)
+✔ [257/593] Built ConLeche.Verify.InstSpine (910ms)
+✔ [259/593] Built ConLeche.Frontend.Olean.Fast:c.o (16s)
+✔ [260/593] Built ConLeche.Frontend.Scan.Equiv.Kit:c.o (830ms)
+✔ [261/593] Built ConLeche.Kernel.TypeChecker:c.o (5.5s)
+✔ [262/593] Built ConLeche.Verify.InstSpine:c.o (621ms)
+✔ [263/593] Built ConLeche.Verify.IotaReduct (1.2s)
+✔ [265/593] Built ConLeche.Verify.IotaReduct:c.o (122ms)
+✔ [266/593] Built ConLeche.Kernel.CoreIO:c.o (5.9s)
+✔ [267/593] Built ConLeche.Frontend.Scan.Equiv.Scalars (2.8s)
+✔ [269/593] Built ConLeche.Frontend.Scan.Equiv.Scalars:c.o (283ms)
+✔ [270/593] Built ConLeche.Frontend.Scan.Fast:c.o (11s)
+✔ [271/593] Built ConLeche.Frontend.Scan.Naive:c.o (7.1s)
+✔ [272/593] Built ConLeche.Cached.ExprOpsC (16s)
+✔ [274/593] Built ConLeche.Cached.StateC (1.5s)
+✔ [276/593] Built ConLeche.Cached.StateC:c.o (2.9s)
+✔ [277/593] Built ConLeche.Kernel.NatOpPins (33s)
+✔ [279/593] Built ConLeche.Verify.Cached.OpsC (5.2s)
+✔ [281/593] Built ConLeche.Verify.Cached.OpsC:c.o (87ms)
+✔ [282/593] Built ConLeche.Kernel.CheckerBase (414ms)
+✔ [284/593] Built ConLeche.Kernel.Inductives.StructInstall (318ms)
+✔ [286/593] Built ConLeche.Frontend.Scan.Equiv.Keys (13s)
+✔ [288/593] Built ConLeche.Kernel.CheckerBase:c.o (483ms)
+✔ [289/593] Built ConLeche.Kernel.Inductives.StructInstall:c.o (221ms)
+✔ [290/593] Built ConLeche.Kernel.Inductives.SumInstall (421ms)
+✔ [292/593] Built ConLeche.Kernel.Inductives.SumInstall:c.o (467ms)
+✔ [293/593] Built ConLeche.Frontend.Scan.Equiv.Keys:c.o (829ms)
+✔ [294/593] Built ConLeche.Kernel.Inductives.Positivity (1.4s)
+✔ [296/593] Built ConLeche.Verify.PairM (19s)
+✔ [298/593] Built ConLeche.Kernel.Inductives.BlockShape (780ms)
+✔ [300/593] Built ConLeche.Verify.Mono (581ms)
+✔ [302/593] Built ConLeche.Verify.Mono:c.o (96ms)
+✔ [303/593] Built ConLeche.Kernel.Inductives.BlockRec (332ms)
+✔ [305/593] Built ConLeche.Kernel.Inductives.BlockRec:c.o (137ms)
+✔ [306/593] Built ConLeche.Kernel.Inductives.ClassRead (661ms)
+✔ [308/593] Built ConLeche.Kernel.Inductives.RecCheck (1.1s)
+✔ [310/593] Built ConLeche.Verify.Inductives.BlockShapeInv (1.2s)
+✔ [312/593] Built ConLeche.Kernel.Inductives.BlockInstall (940ms)
+✔ [314/593] Built ConLeche.Kernel.Inductives.ClassRead:c.o (669ms)
+✔ [315/593] Built ConLeche.Verify.Inductives.BlockShapeInv:c.o (353ms)
+✔ [316/593] Built ConLeche.Kernel.Install (548ms)
+✔ [318/593] Built ConLeche.Kernel.Inductives.BlockShape:c.o (1.8s)
+✔ [319/593] Built ConLeche.Kernel.Inductives.Positivity:c.o (2.7s)
+✔ [320/593] Built ConLeche.Kernel.Inductives.BlockInstall:c.o (855ms)
+✔ [321/593] Built ConLeche.Kernel.Checker (887ms)
+✔ [323/593] Built ConLeche.Cached.Needs (490ms)
+✔ [325/593] Built ConLeche.Kernel.Install:c.o (437ms)
+✔ [326/593] Built ConLeche.Kernel.Inductives.IotaRead (599ms)
+✔ [328/593] Built ConLeche.Kernel.Inductives.RecCheck:c.o (1.4s)
+✔ [329/593] Built ConLeche.Verify.PairM:c.o (3.2s)
+✔ [330/593] Built ConLeche.Cached.Needs:c.o (543ms)
+✔ [331/593] Built ConLeche.Kernel.DeclCheck (1.1s)
+✔ [333/593] Built ConLeche.Kernel.Checker:c.o (1.3s)
+✔ [334/593] Built ConLeche.Kernel.Inductives.IotaRead:c.o (1.3s)
+✔ [335/593] Built ConLeche.Verify.EnvBound (917ms)
+✔ [337/593] Built ConLeche.Kernel.Inductives.StreamRecs (1.1s)
+✔ [339/593] Built ConLeche.Verify.EnvBound:c.o (257ms)
+✔ [340/593] Built ConLeche.Verify.Extend.Inversions (2.4s)
+✔ [342/593] Built ConLeche.Verify.Extend.Inversions:c.o (497ms)
+✔ [343/593] Built ConLeche.Kernel.DeclCheck:c.o (1.0s)
+✔ [344/593] Built ConLeche.Kernel.Inductives.GenRec (2.1s)
+✔ [346/593] Built ConLeche.Kernel.Inductives.StreamRecs:c.o (1.6s)
+✔ [347/593] Built ConLeche.Kernel.Inductives.BlockTail (884ms)
+✔ [349/593] Built ConLeche.Verify.CheckerF (2.2s)
+✔ [351/593] Built ConLeche.Kernel.Inductives.BlockTail:c.o (466ms)
+✔ [352/593] Built ConLeche.Kernel.CheckDecl (735ms)
+✔ [354/593] Built ConLeche.Verify.Cached.IndWalksC (1.9s)
+✔ [356/593] Built ConLeche.Kernel.CheckDecl:c.o (357ms)
+✔ [357/593] Built ConLeche.Verify.CheckerF:c.o (1.2s)
+✔ [358/593] Built ConLeche.Verify.Cached.IndWalksC:c.o (374ms)
+✔ [359/593] Built ConLeche.Kernel.Inductives.GenRec:c.o (2.5s)
+✔ [360/593] Built ConLeche.Verify.InferLemmas (8.5s)
+✔ [362/593] Built ConLeche.Verify.InferIOLemmas (709ms)
+✔ [364/593] Built ConLeche.Verify.InferLemmas:c.o (774ms)
+✔ [365/593] Built ConLeche.Verify.InferIOLemmas:c.o (148ms)
+✔ [366/593] Built ConLeche.Verify.InferLeaves (1.7s)
+✔ [368/593] Built ConLeche.Verify.InferLeaves:c.o (147ms)
+✔ [369/593] Built ConLeche.Verify.InferIOLeaves (437ms)
+✔ [371/593] Built ConLeche.Verify.InferIOLeaves:c.o (112ms)
+✔ [372/593] Built ConLeche.Cached.ExprOpsC:c.o (23s)
+✔ [373/593] Built ConLeche.Verify.Deep (6.2s)
+✔ [375/593] Built ConLeche.Verify.Deep:c.o (954ms)
+✔ [376/593] Built ConLeche.Frontend.Scan.Equiv.Objects (23s)
+✔ [378/593] Built ConLeche.Verify.Fueled (8.2s)
+✔ [380/593] Built ConLeche.Frontend.Scan.Equiv.Objects:c.o (3.8s)
+✔ [381/593] Built ConLeche.Verify.Fueled:c.o (1.6s)
+✔ [382/593] Built ConLeche.Kernel.NatOpPins:c.o (49s)
+✔ [383/593] Built ConLeche.Frontend.Scan.Equiv (32s)
+✔ [385/593] Built ConLeche.Frontend.ExportC (1.5s)
+✔ [387/593] Built ConLeche.Frontend.Prelude (516ms)
+✔ [389/593] Built ConLeche.Frontend.Prelude:c.o (141ms)
+✔ [390/593] Built ConLeche.Frontend.Olean.Records (1.2s)
+✔ [392/593] Built ConLeche.Frontend.Stream (1.4s)
+✔ [394/593] Built ConLeche.Frontend.Olean.Group (458ms)
+✔ [396/593] Built ConLeche.Frontend.Olean.Present (446ms)
+✔ [398/593] Built ConLeche.Verify.Frontend.StateEquiv (864ms)
+✔ [400/593] Built ConLeche.Frontend.Olean.Group:c.o (664ms)
+✔ [401/593] Built ConLeche.Frontend.Olean (320ms)
+✔ [403/593] Built ConLeche.Frontend.Olean:c.o (115ms)
+✔ [404/593] Built ConLeche.Frontend.Rounds (1.3s)
+✔ [406/593] Built ConLeche.Verify.Frontend.StateEquiv:c.o (450ms)
+✔ [407/593] Built ConLeche.Frontend.Olean.Present:c.o (670ms)
+✔ [408/593] Built ConLeche.Driver.Tables (547ms)
+✔ [410/593] Built ConLeche.Frontend.Olean.Records:c.o (2.0s)
+✔ [411/593] Built ConLeche.Frontend.Stream:c.o (1.9s)
+✔ [412/593] Built ConLeche.Frontend.Rounds:c.o (667ms)
+✔ [413/593] Built ConLeche.Verify.Frontend.Dense (904ms)
+✔ [415/593] Built ConLeche.Driver.Tables:c.o (565ms)
+✔ [416/593] Built ConLeche.Verify.Frontend.Dense:c.o (1.8s)
+✔ [417/593] Built ConLeche.Verify.Frontend.Good (1.9s)
+✔ [419/593] Built ConLeche.Verify.Frontend.Good:c.o (796ms)
+✔ [420/593] Built ConLeche.Frontend.ExportC:c.o (6.4s)
+✔ [421/593] Built ConLeche.Frontend.Scan.Equiv:c.o (8.9s)
+✔ [422/593] Built ConLeche.Verify.Frontend.Local (10s)
+✔ [424/593] Built ConLeche.Verify.Frontend.Lines (756ms)
+✔ [426/593] Built ConLeche.Frontend.RoundsWork (7.8s)
+✔ [428/593] Built ConLeche.Verify.Frontend.Chunks (897ms)
+✔ [430/593] Built ConLeche.Verify.Frontend.Chunks:c.o (203ms)
+✔ [431/593] Built ConLeche.Verify.Frontend.StreamModel (494ms)
+✔ [433/593] Built ConLeche.Verify.Frontend.StreamModel:c.o (234ms)
+✔ [434/593] Built ConLeche.Verify.Frontend.Local:c.o (2.6s)
+✔ [435/593] Built ConLeche.Verify.Frontend.Lines:c.o (1.9s)
+✔ [436/593] Built ConLeche.Verify.Frontend.RoundsWork (3.0s)
+✔ [438/593] Built ConLeche.Verify.Frontend.RoundsWork:c.o (617ms)
+✔ [439/593] Built ConLeche.Verify.Frontend.Rounds (4.1s)
+✔ [441/593] Built ConLeche.Verify.Frontend.Rounds:c.o (401ms)
+✔ [442/593] Built ConLeche.Driver.OwnerParse (1.6s)
+✔ [444/593] Built ConLeche.Driver.StreamParse (541ms)
+✔ [446/593] Built ConLeche.Driver.StreamParse:c.o (298ms)
+✔ [447/593] Built ConLeche.Driver.OwnerParse:c.o (1.4s)
+✔ [448/593] Built ConLeche.Frontend.RoundsWork:c.o (37s)
+✔ [449/593] Built ConLeche.Verify.BridgeDecl (107s)
+✔ [451/593] Built ConLeche.Cached.CoreC (139s)
+✔ [453/593] Built ConLeche.Verify.BridgeWfImp (662ms)
+✔ [455/593] Built ConLeche.Cached.IndPass (307ms)
+✔ [457/593] Built ConLeche.Verify.BridgeWfImp:c.o (152ms)
+✔ [458/593] Built ConLeche.Cached.IndPass:c.o (175ms)
+✔ [459/593] Built ConLeche.Verify.BridgeDecl:c.o (1.3s)
+✔ [460/593] Built ConLeche.Cached.IndTail (697ms)
+✔ [462/593] Built ConLeche.Cached.IndPositivity (1.5s)
+✔ [464/593] Built ConLeche.Verify.Inductives.DirectInv (1.4s)
+✔ [466/593] Built ConLeche.Cached.IndTail:c.o (740ms)
+✔ [467/593] Built ConLeche.Verify.Inductives.DirectInv:c.o (200ms)
+✔ [468/593] Built ConLeche.Verify.Cached.KnotCongr (1.9s)
+✔ [470/593] Built ConLeche.Cached.IndRec (893ms)
+✔ [472/593] Built ConLeche.Cached.IndBlock (677ms)
+✔ [474/593] Built ConLeche.Cached.CheckerC (484ms)
+✔ [476/593] Built ConLeche.Verify.Cached.KnotCongr:c.o (1.4s)
+✔ [477/593] Built ConLeche.Cached.IotaReadC (388ms)
+✔ [479/593] Built ConLeche.Cached.IndPositivity:c.o (2.7s)
+✔ [480/593] Built ConLeche.Verify.Cached.BlockOverlay (759ms)
+✔ [482/593] Built ConLeche.Cached.IndRec:c.o (2.1s)
+✔ [483/593] Built ConLeche.Cached.CheckerC:c.o (908ms)
+✔ [484/593] Built ConLeche.Cached.IotaReadC:c.o (483ms)
+✔ [485/593] Built ConLeche.Verify.Cached.BlockOverlay:c.o (221ms)
+✔ [486/593] Built ConLeche.Cached.ParsedC (711ms)
+✔ [488/593] Built ConLeche.Verify.Cached.PinOverlay (365ms)
+✔ [490/593] Built ConLeche.Cached.IndBlock:c.o (1.7s)
+✔ [491/593] Built ConLeche.Verify.Cached.PinOverlay:c.o (216ms)
+✔ [492/593] Built ConLeche.Cached.Justify (757ms)
+✔ [494/593] Built ConLeche.Driver.Schedule.Status (849ms)
+✔ [496/593] Built ConLeche.Cached.Decls (376ms)
+✔ [498/593] Built ConLeche.Cached.StreamIndex (394ms)
+✔ [500/593] Built ConLeche.Cached.ParsedC:c.o (1.2s)
+✔ [501/593] Built ConLeche.Cached.Decls:c.o (158ms)
+✔ [502/593] Built ConLeche.Cached.StreamIndex:c.o (289ms)
+✔ [503/593] Built ConLeche.Verify.Cached.Justify (336ms)
+✔ [505/593] Built ConLeche.Cached.Justify:c.o (708ms)
+✔ [506/593] Built ConLeche.Modular (436ms)
+✔ [508/593] Built ConLeche.Driver.Schedule.Status:c.o (781ms)
+✔ [509/593] Built ConLeche.Verify.Cached.Justify:c.o (130ms)
+✔ [510/593] Built ConLeche.Modular:c.o (156ms)
+✔ [511/593] Built ConLeche.Driver.CheckPool (652ms)
+✔ [513/593] Built ConLeche.Driver.CheckPool:c.o (342ms)
+✔ [514/593] Built ConLeche.Verify.Cached.GuardsC (2.2s)
+✔ [516/593] Built ConLeche.Verify.Cached.GuardsC:c.o (266ms)
+✔ [517/593] Built ConLeche.Verify.Cached.PinsC (461ms)
+✔ [519/593] Built ConLeche.Verify.Cached.WalkersC (587ms)
+✔ [521/593] Built ConLeche.Verify.Cached.PinsC:c.o (112ms)
+✔ [522/593] Built ConLeche.Verify.Cached.DeclNames (342ms)
+✔ [524/593] Built ConLeche.Verify.Cached.WalkersC:c.o (358ms)
+✔ [525/593] Built ConLeche.Verify.Cached.DeclNames:c.o (168ms)
+✔ [526/593] Built ConLeche.Driver.Schedule.Run (2.9s)
+✔ [528/593] Built ConLeche.Verify.Cached.IndRecC (1.2s)
+✔ [530/593] Built ConLeche.Cached.CoreC:c.o (8.5s)
+✔ [531/593] Built ConLeche.Verify.Cached.IndPositivityC (1.4s)
+✔ [533/593] Built ConLeche.Verify.Cached.IndRecC:c.o (737ms)
+✔ [534/593] Built ConLeche.Verify.Cached.IndTailC (859ms)
+✔ [536/593] Built ConLeche.Verify.Cached.IndPositivityC:c.o (905ms)
+✔ [537/593] Built ConLeche.Verify.Cached.IndTailC:c.o (368ms)
+✔ [538/593] Built ConLeche.Verify.Cached.IndBlockC (1.2s)
+✔ [540/593] Built ConLeche.Driver.Reach (2.4s)
+✔ [542/593] Built ConLeche.Verify.Cached.IndBlockC:c.o (452ms)
+✔ [543/593] Built ConLeche.Verify.Cached.ViewCongr (2.0s)
+✔ [545/593] Built ConLeche.Verify.Cached.ViewCongr:c.o (932ms)
+✔ [546/593] Built ConLeche.Driver.Reach:c.o (3.2s)
+✔ [547/593] Built ConLeche.Driver.Schedule.Run:c.o (11s)
+✔ [548/593] Built ConLeche.Verify.Cached.DeclPushes (23s)
+✔ [550/593] Built ConLeche.Verify.Cached.DeclPushes:c.o (264ms)
+✔ [551/593] Built ConLeche.Verify.Cached.PushChain (1.1s)
+✔ [553/593] Built ConLeche.Verify.Cached.PushChain:c.o (181ms)
+✔ [554/593] Built ConLeche.Verify.Cached.StreamIndex (758ms)
+✔ [556/593] Built ConLeche.Verify.Cached.StreamIndex:c.o (159ms)
+✔ [557/593] Built ConLeche.Driver.Run (312ms)
+✔ [559/593] Built ConLeche.Driver.Run:c.o (256ms)
+✔ [560/593] Built ConLeche.Driver.CheckMain (1.1s)
+✔ [562/593] Built ConLeche.Driver.Compare (454ms)
+✔ [564/593] Built ConLeche.Driver.CheckMain:c.o (665ms)
+✔ [565/593] Built ConLeche.Driver.Graph (694ms)
+✔ [567/593] Built ConLeche.Driver.CompareJson (349ms)
+✔ [569/593] Built ConLeche.Driver.Worker (678ms)
+✔ [571/593] Built ConLeche.Driver.Compare:c.o (656ms)
+✔ [572/593] Built ConLeche.Driver.CompareJson:c.o (282ms)
+✔ [573/593] Built ConLeche.Driver.CompareModule (246ms)
+✔ [575/593] Built ConLeche.Driver.CompareModule:c.o (154ms)
+✔ [576/593] Built ConLeche.Driver.Graph:c.o (888ms)
+✔ [577/593] Built ConLeche.Driver.Modular (346ms)
+✔ [579/593] Built ConLeche.Driver.Schedule (322ms)
+✔ [581/593] Built ConLeche.Driver.Schedule:c.o (225ms)
+✔ [582/593] Built ConLeche.Driver.Dispatch (314ms)
+✔ [584/593] Built ConLeche.Driver.Modular:c.o (309ms)
+✔ [585/593] Built ConLeche.Driver.Worker:c.o (1.2s)
+✔ [586/593] Built ConLeche.Driver.Dispatch:c.o (235ms)
+✔ [587/593] Built ConLeche.Driver.Cli (624ms)
+✔ [589/593] Built ConLeche.Driver.Cli:c.o (1.0s)
+✔ [590/593] Built Main (1.7s)
+✔ [592/593] Built Main:c.o (6.5s)
+✔ [593/593] Built «con-leche»:exe (584ms)
+Build completed successfully (593 jobs).
+[2026-11-21 05:26:44] con-leche --compare (challenge = official Mathlib, solution = /mnt/d/lean-demo/verify/main.ndjson)
+con-leche: stats: phases: parse 904.3s (index 5.2s), check 1825.7s
+con-leche: stats: check pool: 1825.732s wall, 16 workers, 1468414 records, busy 29199.198s (99.9%); tail 0.404s after the last start, 16 busy then, 1.397s worker-time in it (21.6%)
+con-leche: stats: slowest checks: 163.021s theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554); 156.381s theorem GlobalTheory.HeightCounting.SideCopy.sigSpan_copy (#829660); 90.217s theorem PI.PC.loop_run._proof_1_1 (#571290); 60.794s theorem GlobalTheory.Mem.R3.SelectionPairing.sp_pin (#856529); 46.994s theorem GlobalTheory.PrimeRecip.table_ok._proof_1_1 (#570391)
+con-leche: stats: peak RSS 43.65 GiB
+con-leche: stats: phases: parse 2736.3s (index 1.8s), check 3.7s
+con-leche: stats: check pool: 3.730s wall, 16 workers, 51688 records, busy 58.345s (97.7%); tail 0.098s after the last start, 16 busy then, 0.403s worker-time in it (25.7%)
+con-leche: stats: slowest checks: 0.149s axiom riemannZeta_eq_zero_re (#51218); 0.125s axiom riemannHypothesis (#51215); 0.099s theorem MeasureTheory.hahn_decomposition (#43568); 0.094s axiom LFunction_eq_zero_re_of_isPrimitive (#51687); 0.094s axiom LFunction_eq_zero_re (#51583)
+con-leche: stats: peak RSS 43.65 GiB
+con-leche: accepted 51688 declarations, 5 axioms justified by the solution /mnt/d/lean-demo/verify/main.ndjson (1468414 declarations accepted) (--verified)
+con-leche: theorem riemannHypothesis justified by the solution
+con-leche: theorem riemannZeta_eq_zero_re justified by the solution
+con-leche: theorem LFunction_ne_zero_of_half_lt_re justified by the solution
+con-leche: theorem LFunction_eq_zero_re justified by the solution
+con-leche: theorem LFunction_eq_zero_re_of_isPrimitive justified by the solution
+[2026-11-21 06:12:27] con-leche exited with code 0
+[2026-11-21 06:12:27] ACCEPTED: the solution proves the challenge statements (official Mathlib).
+VERIFY_RC=0

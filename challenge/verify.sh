@@ -2,7 +2,7 @@
 # Checks, with `con-leche --compare`, that main.ndjson contains proofs of the statements in
 # Challenge.lean, whose definitions come from official Mathlib (not from the project).
 #
-# Usage (Linux x86_64, at least 33 GB of RAM):
+# Usage (Linux x86_64, 48 GB of RAM minimum, 64 GB recommended; about 80 GB of free disk):
 #   bash verify.sh /path/to/main.ndjson[.zst]
 #
 # Uses only public sources at pinned commits:

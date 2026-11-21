@@ -123,8 +123,19 @@ embed the absolute path of their source file.
 
 ## 5. Reproducing the comparison
 
-You need the solution file `main.ndjson` (or `main.ndjson.zst`) from the [large artifacts](#large-artifacts)
-and a machine with **at least 33 GB of RAM** (measured for the comparison on the 16-thread Windows run).
+You need the solution file `main.ndjson` (or `main.ndjson.zst`) from the [large artifacts](#large-artifacts).
+
+### Hardware requirements
+
+| Task | RAM | Free disk | Reference time |
+|---|---|---|---|
+| `verify.sh` / `con-leche --compare` | **48 GB minimum, 64 GB recommended** (con-leche reported a peak RSS of 43.65 GiB, reached while parsing `main.ndjson`) | about 80 GB: 61 GB for `main.ndjson` (plus 7.6 GB if starting from the `.zst`), about 9 GB for Mathlib, lean4export and con-leche, about 6 GB for the Lean toolchains | `--compare`: 22 min on a 16-thread laptop (i7-13620H) in performance mode; building con-leche takes about 11 min |
+| nanoda | about 80 GB (maximum RSS on the AWS run) | 61 GB | 40 min on 192 vCPU |
+| Rebuilding the project and the export from source | 165 GB or more (the export alone) | well over 1 TB of scratch space with Lake | hours on 192 vCPU |
+
+Times depend heavily on the CPU, the power mode and the disk. `main.ndjson` should be on a fast local disk:
+reading it from a slow or network disk (for example a Windows drive seen from WSL) multiplies the time of the
+sha256 step and of con-leche's parsing phase.
 
 ### Linux (x86_64)
 
@@ -135,7 +146,10 @@ bash challenge/verify.sh /path/to/main.ndjson.zst
 The script installs elan if needed. It builds `Challenge.lean` against official Mathlib (from the Mathlib
 cache), builds lean4export and con-leche at the pinned commits, exports the challenge and runs
 `con-leche --verified --compare`. Exit code `0` means accepted; `1` rejected, `2` unsupported, `3` error.
-The script has not yet been run end to end by its author on a clean machine. Please report problems.
+
+The script was tested end to end on WSL Ubuntu (16 threads, starting with no Lean toolchain installed). The
+challenge it rebuilt from official Mathlib had exactly the published hash `38ae4856…`, and con-leche accepted
+the solution. The full log is in [`evidence/verify-sh-wsl/`](evidence/verify-sh-wsl/).
 
 ### Windows
 
@@ -191,6 +205,7 @@ evidence/
   nanoda/                        config, run script, output, timing
   con-leche/                     --verified run on AWS: command, output, version, progress summary
   con-leche-compare/             --verified --compare run on Windows: full output
+  verify-sh-wsl/                 end-to-end run of challenge/verify.sh on WSL Ubuntu: full log
   status-page/                   frozen copy of the live build status page (open pagina.html with
                                  status.json next to it) and the progress CSVs
   original-bundle-checksums/     SHA256SUMS of the bundles as produced on AWS
