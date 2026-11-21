@@ -49,7 +49,7 @@ if [[ "$SOLUTION" == *.zst ]]; then
   zstd -d -T0 -f "$SOLUTION" -o "$WORK/main.ndjson"
   SOLUTION="$WORK/main.ndjson"
 fi
-log "sha256 of the solution (may take a minute or two)"
+log "sha256 of the solution (61 GB; a few minutes on a fast local disk, much longer on slow or network disks)"
 GOT=$(sha256sum "$SOLUTION" | cut -d' ' -f1)
 echo "  $GOT"
 if [ "$GOT" != "$EXPECTED_SOLUTION_SHA256" ]; then
