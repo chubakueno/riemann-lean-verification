@@ -1,0 +1,81 @@
+con-leche: reading /home/ubuntu/nanoda/main.ndjson
+con-leche: checking: 1468414 declarations on 180 workers t=54.6s
+con-leche: done: parse 54.6s, check 124.6s, 180 workers t=179.2s
+con-leche: stats: phases: parse 54.6s (index 4.1s), check 124.6s
+con-leche: stats: check pool: 124.573s wall, 180 workers, 1468414 records, busy 12965.190s (57.8%); tail 32.903s after the last start, 177 busy then, 62.425s worker-time in it (1.0%)
+con-leche: stats: slowest checks: 73.719s theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554); 62.463s theorem GlobalTheory.HeightCounting.SideCopy.sigSpan_copy (#829660); 53.301s theorem PI.PC.loop_run._proof_1_1 (#571290); 30.292s theorem Formalism.IrreducibleCountingLemmas.GaloisIrreducibility.PrimeCountingLemmas.factorial_ladder_one_forty_one._proof_1_1 (#226690); 25.595s theorem GlobalTheory.PrimeRecip.table_ok._proof_1_1 (#570391)
+con-leche: stats: peak RSS 48.59 GiB
+	Command being timed: "/home/ubuntu/tools/con-leche/.lake/build/bin/con-leche --verified --jobs=180 --progress -- /home/ubuntu/nanoda/main.ndjson"
+	User time (seconds): 13560.39
+	System time (seconds): 346.74
+	Percent of CPU this job got: 7656%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:01.63
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 50955452
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25807124
+	Voluntary context switches: 1659505
+	Involuntary context switches: 42299
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 592776
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+CONLECHE_RC=0
+con-leche: check 1468395 (99%) theorem PositivityTheory.ThKG.Loc.Cone.Vf.dbl_eigen_k t=146.4s busy=19/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.254s
+con-leche: check 1468396 (99%) theorem PositivityTheory.ThKW.Eta.local_norm_k t=146.4s busy=18/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.256s
+con-leche: check 1468397 (99%) theorem GlobalTheory.InertUnitNorm.unit_eq_mul_conj_k t=146.4s busy=17/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.256s
+con-leche: check 1468398 (99%) theorem PositivityTheory.SiegelWeilFormula.Ldexb.exists_skewUnit_k t=146.4s busy=16/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.263s
+con-leche: check 1468399 (99%) theorem PositivityTheory.ThKW.unitary_character_trivial_global t=146.4s busy=15/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.279s
+con-leche: check 1468400 (99%) theorem GlobalTheory.ThetaSmoothF.contDiff_thetaTr_realF_k t=146.4s busy=14/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.297s
+con-leche: check 1468401 (99%) theorem UpperTheory.PullbackConnectingMap.gm_pull t=146.4s busy=13/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.311s
+con-leche: check 1468402 (99%) theorem PositivityTheory.ThKW.Eta.key_k t=146.4s busy=12/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.311s
+con-leche: check 1468403 (99%) theorem GlobalTheory.SplitLagrF.exists_levi_k t=146.4s busy=11/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.335s
+con-leche: check 1468404 (99%) theorem PositivityTheory.SiegelWeilFormula.Act.C5.continuous_sB_k t=146.4s busy=10/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.336s
+con-leche: check 1468405 (99%) theorem PositivityTheory.SiegelWeilFormula.Act.C5.heis'_k t=146.4s busy=9/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.337s
+con-leche: check 1468406 (99%) theorem GlobalTheory.DblTargetRestrictCore.restrict_core_k t=146.4s busy=8/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.340s
+con-leche: check 1468407 (99%) theorem GlobalTheory.ThK.Dbl.frameConj_k t=146.4s busy=7/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.346s
+con-leche: check 1468408 (99%) theorem GlobalTheory.ThK.Dbl.vacFix2_k t=146.5s busy=6/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.385s
+con-leche: check 1468409 (99%) theorem GlobalTheory.Poinc.TestAtPt.exists_uTest_isBC t=146.5s busy=5/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.387s
+con-leche: check 1468410 (99%) theorem GlobalTheory.ThK.Dbl.Vf2.exists_beta_k t=146.5s busy=4/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.387s
+con-leche: check 1468411 (99%) theorem _private.Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.ThetaParseval.HalfIndexLattices.EtaProdK.0.UpperTheory.TP.W.eta_prod_all t=146.6s busy=3/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.459s
+con-leche: check 1468412 (99%) theorem GlobalTheory.SS.exists_semiAbelian_model_torusExtension_of_potModel t=147.0s busy=2/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 41.922s
+con-leche: check 1468413 (99%) theorem GlobalTheory.HeightCounting.SideCopy.sigSpan_copy t=167.6s busy=1/180, oldest theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554) 62.479s
+con-leche: check 1468414 (100%) theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy t=178.8s busy=0/180
+con-leche: check done: 1468414 declarations t=179.2s (check 124.6s)
+con-leche: done: parse 54.6s, check 124.6s, 180 workers t=179.2s
+con-leche: stats: phases: parse 54.6s (index 4.1s), check 124.6s
+con-leche: stats: check pool: 124.573s wall, 180 workers, 1468414 records, busy 12965.190s (57.8%); tail 32.903s after the last start, 177 busy then, 62.425s worker-time in it (1.0%)
+con-leche: stats: slowest checks: 73.719s theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554); 62.463s theorem GlobalTheory.HeightCounting.SideCopy.sigSpan_copy (#829660); 53.301s theorem PI.PC.loop_run._proof_1_1 (#571290); 30.292s theorem Formalism.IrreducibleCountingLemmas.GaloisIrreducibility.PrimeCountingLemmas.factorial_ladder_one_forty_one._proof_1_1 (#226690); 25.595s theorem GlobalTheory.PrimeRecip.table_ok._proof_1_1 (#570391)
+con-leche: stats: peak RSS 48.59 GiB
+	Command being timed: "/home/ubuntu/tools/con-leche/.lake/build/bin/con-leche --verified --jobs=180 --progress -- /home/ubuntu/nanoda/main.ndjson"
+	User time (seconds): 13560.39
+	System time (seconds): 346.74
+	Percent of CPU this job got: 7656%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:01.63
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 50955452
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 25807124
+	Voluntary context switches: 1659505
+	Involuntary context switches: 42299
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 592776
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+CONLECHE_RC=0

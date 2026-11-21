@@ -1,0 +1,24 @@
+	Command being timed: "lake env /home/ubuntu/tools/lean4export/.lake/build/bin/lean4export Main -- riemannHypothesis riemannZeta_eq_zero_re LFunction_ne_zero_of_half_lt_re LFunction_eq_zero_re LFunction_eq_zero_re_of_isPrimitive"
+	User time (seconds): 6856.23
+	System time (seconds): 1292.32
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:16:08
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 164852456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 14388
+	Minor (reclaiming a frame) page faults: 589167332
+	Voluntary context switches: 23280
+	Involuntary context switches: 52520
+	Swaps: 0
+	File system inputs: 4081328
+	File system outputs: 120256432
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+EXPORT_RC=0

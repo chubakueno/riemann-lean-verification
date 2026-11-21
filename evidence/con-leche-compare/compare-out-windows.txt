@@ -1,0 +1,25 @@
+Ejecutado por el usuario en cmd.exe (Windows 11, i7-13620H 16 hilos, 64 GB RAM), 2026-11-21:
+
+D:\lean-demo\tools\con-leche\.lake\build\bin\con-leche.exe --verified --jobs=16 --progress=20000 --compare -- D:\lean-demo\challenge\challenge.ndjson D:\lean-demo\verify\main.ndjson
+
+con-leche: reading D:\lean-demo\challenge\challenge.ndjson
+con-leche: reading D:\lean-demo\verify\main.ndjson
+con-leche: checking: 1468414 declarations on 16 workers t=168.3s
+[... líneas de progreso omitidas ...]
+con-leche: check done: 1468414 declarations t=1305.6s (check 1137.2s)
+con-leche: done: parse 168.3s, check 1137.2s, 16 workers t=1305.6s
+con-leche: stats: phases: parse 168.3s (index 3.8s), check 1137.2s
+con-leche: stats: check pool: 1137.235s wall, 16 workers, 1468414 records, busy 18184.983s (99.9%); tail 0.342s after the last start, 16 busy then, 1.269s worker-time in it (23.1%)
+con-leche: stats: slowest checks: 79.454s theorem GlobalTheory.HeightCounting.SideCopy.LamCopy.lam_copy (#829554); 56.359s theorem GlobalTheory.HeightCounting.SideCopy.sigSpan_copy (#829660); 45.064s theorem PI.PC.loop_run._proof_1_1 (#571290); 27.819s theorem Formalism.IrreducibleCountingLemmas.GaloisIrreducibility.PrimeCountingLemmas.factorial_ladder_one_forty_one._proof_1_1 (#226690); 26.172s theorem GlobalTheory.Poinc.TestAtPt.exists_uTest_isBC (#1209894)
+con-leche: checking: 51688 declarations on 16 workers t=1309.9s
+con-leche: check done: 51688 declarations t=1313.4s (check 3.4s)
+con-leche: done: parse 1309.9s, check 3.4s, 16 workers t=1313.4s
+con-leche: stats: phases: parse 1309.9s (index 1.0s), check 3.4s
+con-leche: stats: check pool: 3.451s wall, 16 workers, 51688 records, busy 53.706s (97.2%); tail 0.089s after the last start, 16 busy then, 0.336s worker-time in it (23.5%)
+con-leche: stats: slowest checks: 0.115s theorem Lean.Grind.Ring.OfSemiring.mul_helper (#22850); 0.112s axiom riemannZeta_eq_zero_re (#51218); 0.112s axiom riemannHypothesis (#51215); 0.087s axiom LFunction_ne_zero_of_half_lt_re (#51581); 0.087s axiom LFunction_eq_zero_re (#51583)
+con-leche: accepted 51688 declarations, 5 axioms justified by the solution D:\lean-demo\verify\main.ndjson (1468414 declarations accepted) (--verified)
+con-leche: theorem riemannHypothesis justified by the solution
+con-leche: theorem riemannZeta_eq_zero_re justified by the solution
+con-leche: theorem LFunction_ne_zero_of_half_lt_re justified by the solution
+con-leche: theorem LFunction_eq_zero_re justified by the solution
+con-leche: theorem LFunction_eq_zero_re_of_isPrimitive justified by the solution

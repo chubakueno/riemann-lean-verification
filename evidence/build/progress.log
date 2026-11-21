@@ -1,0 +1,186 @@
+[2026-11-20 20:22:37] == 0. Preparando el sistema (192 CPUs, 369 GB RAM)
+[2026-11-20 20:22:37] == 1. Instalando elan
+[2026-11-20 20:22:37] == 2. Descargando las 14 partes
+[2026-11-20 20:22:41] Archivo verificado (sha256 coincide con el revisado localmente)
+[2026-11-20 20:22:41] == 2b. Extrayendo
+[2026-11-20 20:22:46] == 3. Dependencias y caché de mathlib
+Downloaded: 1 file(s) [attempted 1/8690 = 0%, 134 KB/s], Decompressed: 0[KDownloaded: 97 file(s) [attempted 97/8690 = 1%, 580 KB/s], Decompressed: 3[KDownloaded: 275 file(s) [attempted 275/8690 = 3%, 1846 KB/s], Decompressed: 24[KDownloaded: 370 file(s) [attempted 370/8690 = 4%, 3371 KB/s], Decompressed: 24[KDownloaded: 540 file(s) [attempted 540/8690 = 6%, 2492 KB/s], Decompressed: 24[KDownloaded: 737 file(s) [attempted 737/8690 = 8%, 2999 KB/s], Decompressed: 24[KDownloaded: 947 file(s) [attempted 947/8690 = 10%, 7294 KB/s], Decompressed: 182[KDownloaded: 1133 file(s) [attempted 1133/8690 = 13%, 9507 KB/s], Decompressed: 182[KDownloaded: 1341 file(s) [attempted 1341/8690 = 15%, 3175 KB/s], Decompressed: 182[KDownloaded: 1541 file(s) [attempted 1541/8690 = 17%, 903 KB/s], Decompressed: 182[KDownloaded: 1745 file(s) [attempted 1745/8690 = 20%, 2793 KB/s], Decompressed: 182[KDownloaded: 1957 file(s) [attempted 1957/8690 = 22%, 12871 KB/s], Decompressed: 182[KDownloaded: 2163 file(s) [attempted 2163/8690 = 24%, 287 KB/s], Decompressed: 182[KDownloaded: 2374 file(s) [attempted 2374/8690 = 27%, 764 KB/s], Decompressed: 182[KDownloaded: 2582 file(s) [attempted 2582/8690 = 29%, 273 KB/s], Decompressed: 182[KDownloaded: 2786 file(s) [attempted 2786/8690 = 32%, 6891 KB/s], Decompressed: 182[KDownloaded: 3001 file(s) [attempted 3001/8690 = 34%, 448 KB/s], Decompressed: 182[KDownloaded: 3207 file(s) [attempted 3207/8690 = 36%, 652 KB/s], Decompressed: 182[KDownloaded: 3407 file(s) [attempted 3407/8690 = 39%, 1093 KB/s], Decompressed: 182[KDownloaded: 3573 file(s) [attempted 3573/8690 = 41%, 667 KB/s], Decompressed: 182[KDownloaded: 3739 file(s) [attempted 3739/8690 = 43%, 780 KB/s], Decompressed: 812[KDownloaded: 3876 file(s) [attempted 3876/8690 = 44%, 229 KB/s], Decompressed: 812[KDownloaded: 4005 file(s) [attempted 4005/8690 = 46%, 490 KB/s], Decompressed: 812[KDownloaded: 4159 file(s) [attempted 4159/8690 = 47%, 466 KB/s], Decompressed: 812[KDownloaded: 4364 file(s) [attempted 4364/8690 = 50%, 1191 KB/s], Decompressed: 812[KDownloaded: 4567 file(s) [attempted 4567/8690 = 52%, 2258 KB/s], Decompressed: 812[KDownloaded: 4773 file(s) [attempted 4773/8690 = 54%, 2145 KB/s], Decompressed: 812[KDownloaded: 4983 file(s) [attempted 4983/8690 = 57%, 1458 KB/s], Decompressed: 812[KDownloaded: 5195 file(s) [attempted 5195/8690 = 59%, 1219 KB/s], Decompressed: 812[KDownloaded: 5396 file(s) [attempted 5396/8690 = 62%, 4010 KB/s], Decompressed: 812[KDownloaded: 5607 file(s) [attempted 5607/8690 = 64%, 5136 KB/s], Decompressed: 812[KDownloaded: 5816 file(s) [attempted 5816/8690 = 66%, 611 KB/s], Decompressed: 812[KDownloaded: 6025 file(s) [attempted 6025/8690 = 69%, 481 KB/s], Decompressed: 812[KDownloaded: 6238 file(s) [attempted 6238/8690 = 71%, 1413 KB/s], Decompressed: 812[KDownloaded: 6451 file(s) [attempted 6451/8690 = 74%, 605 KB/s], Decompressed: 812[KDownloaded: 6652 file(s) [attempted 6652/8690 = 76%, 2669 KB/s], Decompressed: 812[KDownloaded: 6861 file(s) [attempted 6861/8690 = 78%, 385 KB/s], Decompressed: 812[KDownloaded: 7067 file(s) [attempted 7067/8690 = 81%, 746 KB/s], Decompressed: 812[KDownloaded: 7282 file(s) [attempted 7282/8690 = 83%, 1248 KB/s], Decompressed: 812[KDownloaded: 7490 file(s) [attempted 7490/8690 = 86%, 244 KB/s], Decompressed: 812[KDownloaded: 7701 file(s) [attempted 7701/8690 = 88%, 1952 KB/s], Decompressed: 812[KDownloaded: 7791 file(s) [attempted 7791/8690 = 89%, 3971 KB/s], Decompressed: 812[KDownloaded: 7924 file(s) [attempted 7924/8690 = 91%, 54 KB/s], Decompressed: 812[KDownloaded: 8130 file(s) [attempted 8130/8690 = 93%, 543 KB/s], Decompressed: 812[KDownloaded: 8329 file(s) [attempted 8329/8690 = 95%, 2779 KB/s], Decompressed: 812[KDownloaded: 8538 file(s) [attempted 8538/8690 = 98%, 1938 KB/s], Decompressed: 812[KDownloaded: 8689 file(s) [attempted 8689/8690 = 99%, 641 KB/s], Decompressed: 812[KDownloaded: 8690 file(s) [attempted 8690/8690 = 100%, 641 KB/s], Decompressed: 812[K
+Decompressed 8690 file(s)
+Already decompressed 8690 file(s)
+[2026-11-20 20:23:52] == 4. lake build con 192 procesos en paralelo (log: /home/ubuntu/lean-demo/logs/build.log)
+[2026-11-20 20:38:52] progreso: 3131 / 175187 módulos | disco: 25G usados, 1.9T libres | RAM usada: 17 GB
+[2026-11-20 20:53:52] progreso: 6246 / 175187 módulos | disco: 27G usados, 1.9T libres | RAM usada: 21 GB
+[2026-11-20 21:08:52] progreso: 9253 / 175187 módulos | disco: 29G usados, 1.9T libres | RAM usada: 18 GB
+[2026-11-20 21:23:52] progreso: 12176 / 175187 módulos | disco: 31G usados, 1.9T libres | RAM usada: 23 GB
+[2026-11-20 21:38:52] progreso: 15056 / 175187 módulos | disco: 33G usados, 1.9T libres | RAM usada: 16 GB
+[2026-11-20 21:53:52] progreso: 17915 / 175187 módulos | disco: 34G usados, 1.9T libres | RAM usada: 23 GB
+[2026-11-20 22:08:53] progreso: 20829 / 175187 módulos | disco: 37G usados, 1.9T libres | RAM usada: 18 GB
+[2026-11-20 22:23:53] progreso: 23710 / 175187 módulos | disco: 39G usados, 1.9T libres | RAM usada: 16 GB
+[2026-11-20 22:38:53] progreso: 26569 / 175187 módulos | disco: 41G usados, 1.9T libres | RAM usada: 17 GB
+[2026-11-20 22:53:53] progreso: 29238 / 175187 módulos | disco: 42G usados, 1.9T libres | RAM usada: 19 GB
+[2026-11-20 23:08:53] progreso: 31945 / 175187 módulos | disco: 44G usados, 1.9T libres | RAM usada: 16 GB
+[2026-11-20 23:23:53] progreso: 34599 / 175187 módulos | disco: 45G usados, 1.9T libres | RAM usada: 19 GB
+[2026-11-20 23:38:54] progreso: 37159 / 175187 módulos | disco: 46G usados, 1.9T libres | RAM usada: 24 GB
+[2026-11-20 23:53:54] progreso: 39562 / 175187 módulos | disco: 47G usados, 1.9T libres | RAM usada: 15 GB
+[2026-11-21 00:00:22] == 0. Preparando el sistema (192 CPUs, 369 GB RAM)
+[2026-11-21 00:00:23] Archivo verificado (sha256 coincide con el revisado localmente)
+[2026-11-21 00:00:23] == 3. Dependencias y caché de mathlib
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 8690 file(s)
+[2026-11-21 00:00:27] == 4. sched.py build con 184 procesos en paralelo (log: /home/ubuntu/lean-demo/logs/build.log)
+[2026-11-21 00:00:36] build: 175187 módulos, 40576 ya compilados, 134611 por compilar (1 .olean incompletos descartados), 184 procesos
+[2026-11-21 00:01:37] sched: 41681/175187 compilados | 1105/min | en curso 184, listos 13956, fallos 0 | faltan ~2.0 h
+[2026-11-21 00:02:37] sched: 42850/175187 compilados | 1169/min | en curso 184, listos 14261, fallos 0 | faltan ~1.9 h
+[2026-11-21 00:03:37] sched: 43997/175187 compilados | 1147/min | en curso 184, listos 14612, fallos 0 | faltan ~1.9 h
+[2026-11-21 00:04:37] sched: 45167/175187 compilados | 1170/min | en curso 184, listos 14946, fallos 0 | faltan ~1.9 h
+[2026-11-21 00:05:37] sched: 46408/175187 compilados | 1241/min | en curso 184, listos 15273, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:06:37] sched: 47624/175187 compilados | 1216/min | en curso 184, listos 15479, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:07:37] sched: 48828/175187 compilados | 1204/min | en curso 184, listos 15539, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:08:37] sched: 50027/175187 compilados | 1199/min | en curso 184, listos 15343, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:09:37] sched: 51231/175187 compilados | 1204/min | en curso 184, listos 15662, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:10:37] sched: 52454/175187 compilados | 1223/min | en curso 184, listos 15754, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:11:37] sched: 53622/175187 compilados | 1168/min | en curso 184, listos 15730, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:12:37] sched: 54759/175187 compilados | 1137/min | en curso 184, listos 15681, fallos 0 | faltan ~1.8 h
+[2026-11-21 00:13:37] sched: 55858/175187 compilados | 1099/min | en curso 184, listos 15802, fallos 0 | faltan ~1.8 h
+[2026-11-21 00:14:37] sched: 56928/175187 compilados | 1070/min | en curso 184, listos 15950, fallos 0 | faltan ~1.8 h
+[2026-11-21 00:15:28] progreso: 57835 / 175187 módulos | disco: 51G usados, 1.9T libres | RAM usada: 99 GB
+[2026-11-21 00:15:37] sched: 58010/175187 compilados | 1082/min | en curso 184, listos 16103, fallos 0 | faltan ~1.8 h
+[2026-11-21 00:16:37] sched: 59082/175187 compilados | 1072/min | en curso 184, listos 16282, fallos 0 | faltan ~1.8 h
+[2026-11-21 00:17:37] sched: 60184/175187 compilados | 1102/min | en curso 184, listos 16385, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:18:37] sched: 61281/175187 compilados | 1097/min | en curso 184, listos 16362, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:19:37] sched: 62320/175187 compilados | 1039/min | en curso 184, listos 16386, fallos 0 | faltan ~1.8 h
+[2026-11-21 00:20:37] sched: 63399/175187 compilados | 1079/min | en curso 184, listos 16347, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:21:37] sched: 64477/175187 compilados | 1078/min | en curso 184, listos 16476, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:22:37] sched: 65564/175187 compilados | 1087/min | en curso 184, listos 16411, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:23:37] sched: 66627/175187 compilados | 1063/min | en curso 184, listos 16373, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:24:37] sched: 67672/175187 compilados | 1045/min | en curso 184, listos 16573, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:25:37] sched: 68707/175187 compilados | 1035/min | en curso 184, listos 16586, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:26:37] sched: 69806/175187 compilados | 1099/min | en curso 184, listos 16555, fallos 0 | faltan ~1.6 h
+[2026-11-21 00:27:37] sched: 70822/175187 compilados | 1016/min | en curso 184, listos 16687, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:28:37] sched: 71889/175187 compilados | 1067/min | en curso 184, listos 16776, fallos 0 | faltan ~1.6 h
+[2026-11-21 00:29:37] sched: 72964/175187 compilados | 1075/min | en curso 184, listos 16690, fallos 0 | faltan ~1.6 h
+[2026-11-21 00:30:28] progreso: 73810 / 175187 módulos | disco: 59G usados, 1.9T libres | RAM usada: 117 GB
+[2026-11-21 00:30:37] sched: 73957/175187 compilados | 993/min | en curso 184, listos 16809, fallos 0 | faltan ~1.7 h
+[2026-11-21 00:31:37] sched: 75003/175187 compilados | 1046/min | en curso 184, listos 16869, fallos 0 | faltan ~1.6 h
+[2026-11-21 00:32:37] sched: 76090/175187 compilados | 1087/min | en curso 184, listos 16722, fallos 0 | faltan ~1.5 h
+[2026-11-21 00:33:37] sched: 77143/175187 compilados | 1053/min | en curso 184, listos 16841, fallos 0 | faltan ~1.6 h
+[2026-11-21 00:34:37] sched: 78203/175187 compilados | 1060/min | en curso 184, listos 16785, fallos 0 | faltan ~1.5 h
+[2026-11-21 00:35:37] sched: 79269/175187 compilados | 1066/min | en curso 184, listos 16983, fallos 0 | faltan ~1.5 h
+[2026-11-21 00:36:37] sched: 80370/175187 compilados | 1101/min | en curso 184, listos 16934, fallos 0 | faltan ~1.4 h
+[2026-11-21 00:37:37] sched: 81440/175187 compilados | 1070/min | en curso 184, listos 17162, fallos 0 | faltan ~1.5 h
+[2026-11-21 00:38:37] sched: 82471/175187 compilados | 1031/min | en curso 184, listos 17187, fallos 0 | faltan ~1.5 h
+[2026-11-21 00:39:37] sched: 83577/175187 compilados | 1106/min | en curso 184, listos 17128, fallos 0 | faltan ~1.4 h
+[2026-11-21 00:40:37] sched: 84613/175187 compilados | 1036/min | en curso 184, listos 16941, fallos 0 | faltan ~1.5 h
+[2026-11-21 00:41:37] sched: 85703/175187 compilados | 1090/min | en curso 184, listos 16814, fallos 0 | faltan ~1.4 h
+[2026-11-21 00:42:37] sched: 86778/175187 compilados | 1075/min | en curso 184, listos 16918, fallos 0 | faltan ~1.4 h
+[2026-11-21 00:43:37] sched: 87794/175187 compilados | 1016/min | en curso 184, listos 16920, fallos 0 | faltan ~1.4 h
+[2026-11-21 00:44:37] sched: 88770/175187 compilados | 976/min | en curso 184, listos 16795, fallos 0 | faltan ~1.5 h
+[2026-11-21 00:45:29] progreso: 89723 / 175187 módulos | disco: 67G usados, 1.9T libres | RAM usada: 113 GB
+[2026-11-21 00:45:37] sched: 89870/175187 compilados | 1100/min | en curso 184, listos 16906, fallos 0 | faltan ~1.3 h
+[2026-11-21 00:46:37] sched: 90897/175187 compilados | 1027/min | en curso 184, listos 16806, fallos 0 | faltan ~1.4 h
+[2026-11-21 00:47:37] sched: 91947/175187 compilados | 1050/min | en curso 184, listos 16688, fallos 0 | faltan ~1.3 h
+[2026-11-21 00:48:37] sched: 92956/175187 compilados | 1009/min | en curso 184, listos 16941, fallos 0 | faltan ~1.4 h
+[2026-11-21 00:49:37] sched: 94083/175187 compilados | 1127/min | en curso 184, listos 16742, fallos 0 | faltan ~1.2 h
+[2026-11-21 00:50:37] sched: 95150/175187 compilados | 1067/min | en curso 184, listos 16730, fallos 0 | faltan ~1.3 h
+[2026-11-21 00:51:37] sched: 96216/175187 compilados | 1066/min | en curso 184, listos 16855, fallos 0 | faltan ~1.2 h
+[2026-11-21 00:52:37] sched: 97262/175187 compilados | 1046/min | en curso 184, listos 16696, fallos 0 | faltan ~1.2 h
+[2026-11-21 00:53:37] sched: 98262/175187 compilados | 1000/min | en curso 184, listos 16553, fallos 0 | faltan ~1.3 h
+[2026-11-21 00:54:37] sched: 99297/175187 compilados | 1035/min | en curso 184, listos 16506, fallos 0 | faltan ~1.2 h
+[2026-11-21 00:55:37] sched: 100290/175187 compilados | 993/min | en curso 184, listos 16264, fallos 0 | faltan ~1.3 h
+[2026-11-21 00:56:37] sched: 101314/175187 compilados | 1024/min | en curso 184, listos 16076, fallos 0 | faltan ~1.2 h
+[2026-11-21 00:57:37] sched: 102406/175187 compilados | 1092/min | en curso 184, listos 16170, fallos 0 | faltan ~1.1 h
+[2026-11-21 00:58:37] sched: 103397/175187 compilados | 991/min | en curso 184, listos 16077, fallos 0 | faltan ~1.2 h
+[2026-11-21 00:59:37] sched: 104545/175187 compilados | 1148/min | en curso 184, listos 15860, fallos 0 | faltan ~1.0 h
+[2026-11-21 01:00:29] progreso: 105528 / 175187 módulos | disco: 74G usados, 1.9T libres | RAM usada: 94 GB
+[2026-11-21 01:00:37] sched: 105679/175187 compilados | 1134/min | en curso 184, listos 15946, fallos 0 | faltan ~1.0 h
+[2026-11-21 01:01:37] sched: 106666/175187 compilados | 987/min | en curso 184, listos 16048, fallos 0 | faltan ~1.2 h
+[2026-11-21 01:02:37] sched: 107716/175187 compilados | 1050/min | en curso 184, listos 15890, fallos 0 | faltan ~1.1 h
+[2026-11-21 01:03:37] sched: 108712/175187 compilados | 996/min | en curso 184, listos 15690, fallos 0 | faltan ~1.1 h
+[2026-11-21 01:04:37] sched: 109791/175187 compilados | 1079/min | en curso 184, listos 15663, fallos 0 | faltan ~1.0 h
+[2026-11-21 01:05:37] sched: 110874/175187 compilados | 1083/min | en curso 184, listos 15501, fallos 0 | faltan ~1.0 h
+[2026-11-21 01:06:37] sched: 111985/175187 compilados | 1111/min | en curso 184, listos 15249, fallos 0 | faltan ~0.9 h
+[2026-11-21 01:07:37] sched: 113092/175187 compilados | 1107/min | en curso 184, listos 15146, fallos 0 | faltan ~0.9 h
+[2026-11-21 01:08:37] sched: 114053/175187 compilados | 961/min | en curso 184, listos 15151, fallos 0 | faltan ~1.1 h
+[2026-11-21 01:09:37] sched: 115238/175187 compilados | 1185/min | en curso 184, listos 15015, fallos 0 | faltan ~0.8 h
+[2026-11-21 01:10:37] sched: 116267/175187 compilados | 1029/min | en curso 184, listos 14820, fallos 0 | faltan ~1.0 h
+[2026-11-21 01:11:37] sched: 117394/175187 compilados | 1127/min | en curso 184, listos 14813, fallos 0 | faltan ~0.9 h
+[2026-11-21 01:12:37] sched: 118513/175187 compilados | 1119/min | en curso 184, listos 14627, fallos 0 | faltan ~0.8 h
+[2026-11-21 01:13:37] sched: 119699/175187 compilados | 1186/min | en curso 184, listos 14388, fallos 0 | faltan ~0.8 h
+[2026-11-21 01:14:37] sched: 120806/175187 compilados | 1107/min | en curso 184, listos 14112, fallos 0 | faltan ~0.8 h
+[2026-11-21 01:15:30] progreso: 121788 / 175187 módulos | disco: 83G usados, 1.9T libres | RAM usada: 102 GB
+[2026-11-21 01:15:37] sched: 121934/175187 compilados | 1128/min | en curso 184, listos 14104, fallos 0 | faltan ~0.8 h
+[2026-11-21 01:16:37] sched: 123169/175187 compilados | 1235/min | en curso 184, listos 13828, fallos 0 | faltan ~0.7 h
+[2026-11-21 01:17:37] sched: 124131/175187 compilados | 962/min | en curso 184, listos 13605, fallos 0 | faltan ~0.9 h
+[2026-11-21 01:18:37] sched: 125259/175187 compilados | 1128/min | en curso 184, listos 13389, fallos 0 | faltan ~0.7 h
+[2026-11-21 01:19:37] sched: 126326/175187 compilados | 1067/min | en curso 184, listos 13117, fallos 0 | faltan ~0.8 h
+[2026-11-21 01:20:37] sched: 127512/175187 compilados | 1186/min | en curso 184, listos 12871, fallos 0 | faltan ~0.7 h
+[2026-11-21 01:21:37] sched: 128490/175187 compilados | 978/min | en curso 184, listos 12519, fallos 0 | faltan ~0.8 h
+[2026-11-21 01:22:37] sched: 129630/175187 compilados | 1140/min | en curso 184, listos 12351, fallos 0 | faltan ~0.7 h
+[2026-11-21 01:23:37] sched: 130736/175187 compilados | 1106/min | en curso 184, listos 12051, fallos 0 | faltan ~0.7 h
+[2026-11-21 01:24:37] sched: 131849/175187 compilados | 1113/min | en curso 184, listos 11856, fallos 0 | faltan ~0.6 h
+[2026-11-21 01:25:37] sched: 132768/175187 compilados | 919/min | en curso 184, listos 11695, fallos 0 | faltan ~0.8 h
+[2026-11-21 01:26:37] sched: 133919/175187 compilados | 1151/min | en curso 184, listos 11487, fallos 0 | faltan ~0.6 h
+[2026-11-21 01:27:37] sched: 135025/175187 compilados | 1106/min | en curso 184, listos 11199, fallos 0 | faltan ~0.6 h
+[2026-11-21 01:28:37] sched: 136112/175187 compilados | 1087/min | en curso 184, listos 10932, fallos 0 | faltan ~0.6 h
+[2026-11-21 01:29:37] sched: 137080/175187 compilados | 968/min | en curso 184, listos 10790, fallos 0 | faltan ~0.7 h
+[2026-11-21 01:30:31] progreso: 137979 / 175187 módulos | disco: 92G usados, 1.9T libres | RAM usada: 125 GB
+[2026-11-21 01:30:37] sched: 138098/175187 compilados | 1018/min | en curso 184, listos 10716, fallos 0 | faltan ~0.6 h
+[2026-11-21 01:31:37] sched: 139295/175187 compilados | 1197/min | en curso 184, listos 10394, fallos 0 | faltan ~0.5 h
+[2026-11-21 01:32:37] sched: 140238/175187 compilados | 943/min | en curso 184, listos 10220, fallos 0 | faltan ~0.6 h
+[2026-11-21 01:33:37] sched: 141385/175187 compilados | 1147/min | en curso 184, listos 9859, fallos 0 | faltan ~0.5 h
+[2026-11-21 01:34:37] sched: 142491/175187 compilados | 1106/min | en curso 184, listos 9513, fallos 0 | faltan ~0.5 h
+[2026-11-21 01:35:37] sched: 143636/175187 compilados | 1145/min | en curso 184, listos 9092, fallos 0 | faltan ~0.5 h
+[2026-11-21 01:36:37] sched: 144759/175187 compilados | 1123/min | en curso 184, listos 9153, fallos 0 | faltan ~0.5 h
+[2026-11-21 01:37:37] sched: 145817/175187 compilados | 1058/min | en curso 184, listos 8913, fallos 0 | faltan ~0.5 h
+[2026-11-21 01:38:37] sched: 146865/175187 compilados | 1048/min | en curso 184, listos 8690, fallos 0 | faltan ~0.5 h
+[2026-11-21 01:39:37] sched: 147950/175187 compilados | 1085/min | en curso 184, listos 8531, fallos 0 | faltan ~0.4 h
+[2026-11-21 01:40:37] sched: 149010/175187 compilados | 1060/min | en curso 184, listos 8184, fallos 0 | faltan ~0.4 h
+[2026-11-21 01:41:37] sched: 150068/175187 compilados | 1058/min | en curso 184, listos 7901, fallos 0 | faltan ~0.4 h
+[2026-11-21 01:42:37] sched: 151147/175187 compilados | 1079/min | en curso 184, listos 7690, fallos 0 | faltan ~0.4 h
+[2026-11-21 01:43:37] sched: 152221/175187 compilados | 1074/min | en curso 184, listos 7411, fallos 0 | faltan ~0.4 h
+[2026-11-21 01:44:37] sched: 153163/175187 compilados | 942/min | en curso 184, listos 7223, fallos 0 | faltan ~0.4 h
+[2026-11-21 01:45:31] progreso: 154034 / 175187 módulos | disco: 99G usados, 1.8T libres | RAM usada: 120 GB
+[2026-11-21 01:45:37] sched: 154142/175187 compilados | 979/min | en curso 184, listos 7122, fallos 0 | faltan ~0.4 h
+[2026-11-21 01:46:37] sched: 155265/175187 compilados | 1123/min | en curso 184, listos 6749, fallos 0 | faltan ~0.3 h
+[2026-11-21 01:47:37] sched: 156292/175187 compilados | 1027/min | en curso 184, listos 6402, fallos 0 | faltan ~0.3 h
+[2026-11-21 01:48:37] sched: 157379/175187 compilados | 1087/min | en curso 184, listos 6229, fallos 0 | faltan ~0.3 h
+[2026-11-21 01:49:37] sched: 158464/175187 compilados | 1085/min | en curso 184, listos 5934, fallos 0 | faltan ~0.3 h
+[2026-11-21 01:50:37] sched: 159340/175187 compilados | 876/min | en curso 184, listos 5827, fallos 0 | faltan ~0.3 h
+[2026-11-21 01:51:37] sched: 160364/175187 compilados | 1024/min | en curso 184, listos 5536, fallos 0 | faltan ~0.2 h
+[2026-11-21 01:52:37] sched: 161435/175187 compilados | 1071/min | en curso 184, listos 5191, fallos 0 | faltan ~0.2 h
+[2026-11-21 01:53:37] sched: 162305/175187 compilados | 870/min | en curso 184, listos 5158, fallos 0 | faltan ~0.2 h
+[2026-11-21 01:54:37] sched: 163351/175187 compilados | 1046/min | en curso 184, listos 4871, fallos 0 | faltan ~0.2 h
+[2026-11-21 01:55:37] sched: 164200/175187 compilados | 849/min | en curso 184, listos 4702, fallos 0 | faltan ~0.2 h
+[2026-11-21 01:56:37] sched: 165288/175187 compilados | 1088/min | en curso 184, listos 4417, fallos 0 | faltan ~0.2 h
+[2026-11-21 01:57:37] sched: 166314/175187 compilados | 1026/min | en curso 184, listos 4031, fallos 0 | faltan ~0.1 h
+[2026-11-21 01:58:37] sched: 167180/175187 compilados | 866/min | en curso 184, listos 3638, fallos 0 | faltan ~0.2 h
+[2026-11-21 01:59:37] sched: 168372/175187 compilados | 1192/min | en curso 184, listos 3317, fallos 0 | faltan ~0.1 h
+[2026-11-21 02:00:32] progreso: 169058 / 175187 módulos | disco: 107G usados, 1.8T libres | RAM usada: 109 GB
+[2026-11-21 02:00:37] sched: 169146/175187 compilados | 774/min | en curso 184, listos 2867, fallos 0 | faltan ~0.1 h
+[2026-11-21 02:01:37] sched: 170204/175187 compilados | 1058/min | en curso 184, listos 2473, fallos 0 | faltan ~0.1 h
+[2026-11-21 02:02:37] sched: 171118/175187 compilados | 914/min | en curso 184, listos 2095, fallos 0 | faltan ~0.1 h
+[2026-11-21 02:03:37] sched: 172244/175187 compilados | 1126/min | en curso 184, listos 1534, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:04:37] sched: 173190/175187 compilados | 946/min | en curso 184, listos 1016, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:05:37] sched: 174182/175187 compilados | 992/min | en curso 184, listos 570, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:06:37] sched: 175102/175187 compilados | 920/min | en curso 35, listos 0, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:07:37] sched: 175155/175187 compilados | 53/min | en curso 5, listos 0, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:08:37] sched: 175173/175187 compilados | 18/min | en curso 1, listos 0, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:09:37] sched: 175179/175187 compilados | 6/min | en curso 1, listos 0, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:10:37] sched: 175182/175187 compilados | 3/min | en curso 1, listos 0, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:11:37] sched: 175184/175187 compilados | 2/min | en curso 1, listos 0, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:12:37] sched: 175186/175187 compilados | 2/min | en curso 1, listos 0, fallos 0 | faltan ~0.0 h
+[2026-11-21 02:12:53] build terminado en 132 min: compilados 134611, fallos 0, bloqueados por fallos 0
+[2026-11-21 02:12:54] compilación terminó con código 0 en 132 min
+[2026-11-21 02:12:54] == 5. check.lean (enunciado y axiomas)
+RiemannHypothesis definido en: (some Mathlib.NumberTheory.LSeries.RiemannZeta)
+riemannZeta definido en: (some Mathlib.NumberTheory.LSeries.RiemannZeta)
+DirichletCharacter.LFunction definido en: (some Mathlib.NumberTheory.LSeries.DirichletContinuation)
+def RiemannHypothesis : Prop :=
+∀ (s : ℂ), riemannZeta s = 0 → (¬∃ n, s = -2 * (↑n + 1)) → s ≠ 1 → s.re = 1 / 2
+'riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LFunction_eq_zero_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LFunction_eq_zero_re_of_isPrimitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+[2026-11-21 02:13:58] == 6. Empaquetando .lake/build/lib para descargar
+[2026-11-21 02:15:33] progreso: 175187 / 175187 módulos | disco: 137G usados, 1.8T libres | RAM usada: 6 GB
+[2026-11-21 02:15:35] Paquete: /home/ubuntu/lean-demo/out/lib.tar.zst (28G)

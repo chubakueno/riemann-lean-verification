@@ -1,0 +1,192 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lean build</title>
+<style>
+:root{--c:#2563eb}
+body{font-family:system-ui,sans-serif;max-width:920px;margin:2em auto;padding:0 1em;color:#1f2937}
+h1{font-size:1.4em;margin-bottom:.3em} h2{font-size:1.05em;margin-top:1.6em}
+.state{color:var(--c);font-weight:600}
+.bar{background:#e5e7eb;border-radius:6px;height:22px;overflow:hidden}
+.fill{background:var(--c);height:100%;width:0;transition:width 1s}
+.big{font-size:1.3em;margin:.5em 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:1em 0}
+.card{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:10px}
+.card .k{color:#6b7280;font-size:.8em} .card .v{font-size:1.15em;font-weight:600;margin-top:2px}
+pre{background:#f3f4f6;padding:10px;overflow-x:auto;font-size:12px;white-space:pre-wrap;margin:0}
+#meta{color:#6b7280;font-size:.85em} .stale{color:#dc2626!important}
+svg{width:100%;height:180px;background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px}
+.hidden{display:none}
+#verdict{border-radius:10px;padding:14px 18px;margin:1em 0;font-size:1.15em;font-weight:600;color:#fff}
+#verdict small{display:block;font-weight:400;font-size:.8em;opacity:.95;margin-top:4px;color:#fff}
+.checks{list-style:none;padding:0;margin:.5em 0}
+.checks li{padding:6px 0;border-bottom:1px solid #f3f4f6}
+.checks .d{color:#6b7280;font-size:.85em;margin-left:1.8em;word-break:break-word}
+.ic{display:inline-block;width:1.6em}
+.panels{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:1em 0}
+@media(max-width:600px){.panels{grid-template-columns:1fr}}
+.panel{border-radius:10px;padding:12px 14px;border:2px solid #e5e7eb;background:#f9fafb}
+.panel .pt{font-size:.85em;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:.03em}
+.panel .pv{font-size:1.25em;font-weight:700;margin-top:4px}
+.panel .pd{font-size:.85em;color:#4b5563;margin-top:4px}
+</style></head><body>
+<h1>Compilación Lean: <span class="state" id="state">…</span></h1>
+<div class="panels">
+ <div class="panel" id="p-lean"><div class="pt">Compilador de Lean</div><div class="pv" id="pv-lean">…</div><div class="pd" id="pd-lean"></div></div>
+ <div class="panel" id="p-nanoda"><div class="pt">Verificación independiente (nanoda)</div><div class="pv" id="pv-nanoda">…</div><div class="pd" id="pd-nanoda"></div></div>
+ <div class="panel" id="p-conleche"><div class="pt">Verificador con consistencia demostrada (con-leche)</div><div class="pv" id="pv-conleche">…</div><div class="pd" id="pd-conleche"></div></div>
+</div>
+<div id="verdict" class="hidden"></div>
+<h2>Comprobaciones</h2><ul class="checks" id="checks"></ul>
+<div style="font-weight:600;margin-bottom:4px">Compilación de módulos <span id="buildstate" style="font-weight:400;color:#6b7280"></span></div>
+<div class="bar"><div class="fill" id="fill"></div></div>
+<div id="clbox" class="hidden" style="margin-top:1em">
+ <div style="font-weight:600;margin-bottom:4px">Verificación con con-leche <span id="clstate" style="font-weight:400;color:#6b7280"></span></div>
+ <div class="bar"><div class="fill" id="clfill" style="background:#0d9488"></div></div>
+ <div id="cltext" style="margin-top:4px"></div>
+</div>
+<div id="expbox" class="hidden" style="margin-top:1em">
+ <div style="font-weight:600;margin-bottom:4px">Exportación para nanoda <span id="expstate" style="font-weight:400;color:#6b7280"></span></div>
+ <div class="bar"><div class="fill" id="expfill" style="background:#7c3aed"></div></div>
+ <div id="exptext" style="margin-top:4px"></div>
+</div>
+<div class="big"><b id="built">–</b> / <span id="total">–</span> módulos (<span id="pct">–</span>%)</div>
+<div id="meta">Cargando…</div>
+<div class="grid">
+ <div class="card"><div class="k">Ritmo (últimos 10 min)</div><div class="v" id="rate10">–</div></div>
+ <div class="card"><div class="k">Ritmo (última hora)</div><div class="v" id="rate60">–</div></div>
+ <div class="card"><div class="k">Tiempo restante</div><div class="v" id="eta">–</div></div>
+ <div class="card"><div class="k">Fin estimado (tu hora local)</div><div class="v" id="fin">–</div></div>
+ <div class="card"><div class="k">Procesos lean</div><div class="v" id="procs">–</div></div>
+ <div class="card"><div class="k">Carga CPU (1/5/15 min)</div><div class="v" id="load">–</div></div>
+ <div class="card"><div class="k">RAM</div><div class="v" id="mem">–</div></div>
+ <div class="card"><div class="k">Disco</div><div class="v" id="disk">–</div></div>
+ <div class="card"><div class="k">Errores</div><div class="v" id="errc">–</div></div>
+</div>
+<h2>Avance</h2>
+<div style="color:#6b7280;font-size:.85em;margin:4px 0">Compilación (módulos)</div>
+<svg id="chart" viewBox="0 0 900 180" preserveAspectRatio="none"></svg>
+<div id="chart2box" class="hidden"><div style="color:#6b7280;font-size:.85em;margin:10px 0 4px">Exportación para nanoda (GB)</div>
+<svg id="chart2" viewBox="0 0 900 180" preserveAspectRatio="none"></svg></div>
+<div id="errbox" class="hidden"><h2>Errores</h2><pre id="errors"></pre></div>
+<div id="checkbox" class="hidden"><h2>check.lean</h2><pre id="check"></pre></div>
+<h2>Últimos módulos compilados</h2><pre id="last"></pre>
+<h2>Registro de progreso</h2><pre id="plog"></pre>
+<script>
+const $=id=>document.getElementById(id);
+const GB=b=>(b/2**30).toFixed(0)+' GB';
+const dur=s=>{if(s==null)return'–';const h=Math.floor(s/3600),m=Math.floor(s%3600/60);return h+'h '+String(m).padStart(2,'0')+'m'};
+let last=null, ok=true;
+function chart(id,h,ymax,color,label,refLabel){
+  const svg=$(id); if(!h||h.length<2){svg.innerHTML='';return}
+  const t0=h[0][0],t1=h[h.length-1][0]||t0+1,W=900,H=180,P=6;
+  const x=t=>P+(t-t0)/(t1-t0||1)*(W-2*P), y=n=>H-P-Math.min(n,ymax)/ymax*(H-2*P);
+  const pts=h.map(p=>x(p[0]).toFixed(1)+','+y(p[1]).toFixed(1)).join(' ');
+  const fmt=t=>new Date(t*1000).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+  const ref=refLabel?`<line x1="${P}" x2="${W-P}" y1="${y(ymax)}" y2="${y(ymax)}" stroke="#9ca3af" stroke-dasharray="6 4" vector-effect="non-scaling-stroke"/>`+
+    `<text x="${W-8}" y="${y(ymax)+14}" font-size="11" fill="#9ca3af" text-anchor="end">${refLabel}</text>`:'';
+  svg.innerHTML=ref+`<polyline fill="none" stroke="${color}" stroke-width="2" vector-effect="non-scaling-stroke" points="${pts}"/>`+
+    `<text x="8" y="16" font-size="12" fill="#6b7280">${label(h[h.length-1][1])}</text>`+
+    `<text x="8" y="${H-10}" font-size="11" fill="#6b7280">${fmt(t0)}</text>`+
+    `<text x="${W-8}" y="${H-10}" font-size="11" fill="#6b7280" text-anchor="end">${fmt(t1)}</text>`;
+}
+function render(s){
+  const colors={compilando:'#2563eb',verificando:'#7c3aed',verificado:'#16a34a',fallo:'#dc2626',detenido:'#d97706'};
+  document.documentElement.style.setProperty('--c', (s.errors_count>0||s.state==='fallo')?'#dc2626':(colors[s.state]||'#2563eb'));
+  const pct=100*s.built/s.total;
+  $('state').textContent={compilando:'compilando',verificando:'verificando la prueba',verificado:'VERIFICADA',fallo:'FALLÓ',detenido:'detenida'}[s.state]||s.state;
+  const icons={ok:'✔',fail:'✘',running:'⏳',pending:'·',skip:'–'}, icol={ok:'#16a34a',fail:'#dc2626',running:'#7c3aed',pending:'#9ca3af',skip:'#9ca3af'};
+  const ul=$('checks'); ul.innerHTML='';
+  for(const c of (s.checks||[])){
+    const li=document.createElement('li');
+    const ic=document.createElement('span'); ic.className='ic'; ic.textContent=icons[c.status]||'?'; ic.style.color=icol[c.status];
+    li.appendChild(ic); li.appendChild(document.createTextNode(c.name));
+    if(c.detail){const d=document.createElement('div'); d.className='d'; d.textContent=c.detail; li.appendChild(d)}
+    ul.appendChild(li);
+  }
+  const P={
+    lean:{ok:['✔ Verificado','Compiló los 175 187 módulos sin errores (cada teorema pasó por el kernel de Lean); el enunciado es la Hipótesis de Riemann de Mathlib y solo usa propext, Classical.choice y Quot.sound.'],
+          fail:['✘ Falló',''], running:['⏳ En curso',''], pending:['· Pendiente','']},
+    nanoda:{ok:['✔ Verificado','Un verificador de tipos independiente, escrito en Rust, re-verificó toda la cadena de la prueba.'],
+          fail:['✘ Falló',''], running:['⏳ En curso',''], pending:['· Pendiente','Empieza al terminar la exportación.']},
+    conleche:{ok:['✔ Verificado','con-leche, cuya consistencia está demostrada formalmente en Lean (no acepta pruebas de False), re-verificó toda la cadena de la prueba.'],
+          fail:['✘ Falló',''], running:['⏳ En curso',''], pending:['· Pendiente','']}};
+  const PC={ok:['#16a34a','#f0fdf4'],fail:['#dc2626','#fef2f2'],running:['#7c3aed','#f5f3ff'],pending:['#9ca3af','#f9fafb']};
+  for(const g of ['lean','nanoda','conleche']){
+    const sm=(s.summary||{})[g]||{status:'pending',detail:''};
+    const [txt,desc]=P[g][sm.status]||['?',''];
+    $('pv-'+g).textContent=txt; $('pv-'+g).style.color=PC[sm.status][0];
+    $('p-'+g).style.borderColor=PC[sm.status][0]; $('p-'+g).style.background=PC[sm.status][1];
+    let d=desc;
+    if(sm.status!=='ok'&&sm.detail){ d=sm.detail; }
+    if(g==='nanoda'&&sm.status==='running'&&s.export&&s.export.running){ d='Exportando la prueba: '+s.export.size_gb.toFixed(1)+' GB de ~'+s.export.est_gb+' GB estimados'+(s.export.eta?' · faltan ~'+s.export.eta:''); }
+    $('pd-'+g).textContent=d;
+  }
+  const v=$('verdict');
+  if(s.state==='verificado'){v.className='';v.style.background='#16a34a';
+    v.innerHTML='✔ Prueba verificada<small>Compiló completa, el enunciado es la Hipótesis de Riemann de Mathlib, solo usa los axiomas estándar y nanoda y con-leche (verificadores independientes) re-verificaron toda la cadena de la prueba.</small>'}
+  else if(s.state==='fallo'){v.className='';v.style.background='#dc2626';
+    v.innerHTML='✘ La verificación falló<small>Mira abajo qué comprobación falló.</small>'}
+  else if(s.state==='detenido'){v.className='';v.style.background='#d97706';
+    v.innerHTML='⚠ El proceso se detuvo sin terminar<small>No hay compilación ni verificación en curso y faltan comprobaciones.</small>'}
+  else v.className='hidden';
+  $('fill').style.width=pct.toFixed(2)+'%';
+  $('buildstate').textContent=s.built>=s.total?'(terminada)':(s.state==='compilando'?'(en curso)':'');
+  const c=s.conleche;
+  if(c && (c.running || c.rc!==null)){
+    $('clbox').classList.remove('hidden');
+    const ok=c.rc===0 && /accepted \d+ declarations/.test(c.verdict||''), bad=c.rc!==null && !ok;
+    const cp=ok?100:(c.pct||0);
+    $('clfill').style.width=cp+'%';
+    $('clfill').style.background=bad?'#dc2626':(ok?'#16a34a':'#0d9488');
+    $('clstate').textContent=ok?'(terminada)':(bad?'(falló)':'(en curso)');
+    $('cltext').textContent=c.rc!==null?(c.verdict||('código '+c.rc))+(c.elapsed?' · '+c.elapsed:''):(c.phase+(c.pct!==null?' '+c.pct+'% · '+c.n.toLocaleString()+' declaraciones · t='+c.t:''));
+  } else $('clbox').classList.add('hidden');
+  const e=s.export;
+  if(e && (e.running || e.rc!==null || e.size_gb>0)){
+    $('expbox').classList.remove('hidden');
+    const done=e.rc===0, ep=done?100:Math.min(100,100*e.size_gb/e.est_gb);
+    $('expfill').style.width=ep.toFixed(1)+'%';
+    $('expfill').style.background=e.rc!==null&&e.rc!==0?'#dc2626':(done?'#16a34a':'#7c3aed');
+    $('expstate').textContent=done?'(terminada)':(e.rc!==null?'(falló)':(e.running?'(en curso)':'(detenida)'));
+    let t=e.size_gb.toFixed(1)+' GB';
+    if(done) t+=' exportados'+(e.elapsed?' en '+e.elapsed:'');
+    else { t+=' de ~'+e.est_gb+' GB estimados ('+ep.toFixed(1)+'%; el total real puede ser menor)';
+      if(e.rate) t+=' · '+e.rate.toFixed(2)+' GB/min · faltan ~'+e.eta; }
+    $('exptext').textContent=t;
+  } else $('expbox').classList.add('hidden');
+  $('built').textContent=s.built.toLocaleString(); $('total').textContent=s.total.toLocaleString();
+  $('pct').textContent=pct.toFixed(2);
+  document.title=`${pct.toFixed(1)}% · Lean build`;
+  $('rate10').textContent=s.rate10+' /min'; $('rate60').textContent=s.rate60+' /min';
+  $('eta').textContent=s.state==='compilando'?dur(s.eta_seconds):'–';
+  $('fin').textContent=s.finish_epoch&&s.state==='compilando'?new Date(s.finish_epoch*1000).toLocaleString([], {weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):'–';
+  $('procs').textContent=s.lean_procs; $('load').textContent=s.load.join(' / ')+' ('+s.cpus+' núcleos)';
+  $('mem').textContent=GB(s.mem_used)+' / '+GB(s.mem_total);
+  $('disk').textContent=GB(s.disk_used)+' / '+GB(s.disk_total);
+  $('errc').textContent=s.errors_count;
+  $('errbox').classList.toggle('hidden',!s.errors_count); $('errors').textContent=(s.errors||[]).join('\n');
+  $('checkbox').classList.toggle('hidden',!s.check_output); $('check').textContent=s.check_output||'';
+  $('last').textContent=(s.last_built||[]).join('\n'); $('plog').textContent=(s.progress_log||[]).join('\n');
+  chart('chart',s.history,s.total,'#2563eb',v=>v.toLocaleString()+' módulos');
+  const eh=s.export_history||[];
+  $('chart2box').classList.toggle('hidden',eh.length<2);
+  if(eh.length>=2){
+    const est=(s.export&&s.export.est_gb)||105, mx=Math.max(est,...eh.map(p=>p[1]));
+    const done=s.export&&s.export.rc===0;
+    chart('chart2',eh,mx,done?'#16a34a':'#7c3aed',v=>v.toFixed(1)+' GB',done?'':'~'+est+' GB estimados (techo)');
+  }
+}
+async function poll(){
+  try{
+    const r=await fetch('status.json',{cache:'no-store'}); if(!r.ok) throw r.status;
+    const s=await r.json(); last=s; ok=true; render(s);
+  }catch(e){ ok=false }
+}
+setInterval(()=>{
+  if(!last) return;
+  const age=Math.round(Date.now()/1000-last.updated);
+  $('meta').textContent=(ok?'':'⚠ sin conexión con el servidor · ')+'datos de hace '+age+' s · se actualiza sola';
+  $('meta').classList.toggle('stale',!ok||age>90);
+},1000);
+poll(); setInterval(poll,10000);
+</script></body></html>
