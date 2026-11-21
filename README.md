@@ -9,6 +9,12 @@ The large artifacts (the kernel export, about 7.6 GB compressed, and the origina
 Zenodo, [doi:10.5281/zenodo.24414400](https://doi.org/10.5281/zenodo.24414400); see
 [Large artifacts](#large-artifacts).
 
+| Archived on Zenodo | DOI |
+|---|---|
+| Data: kernel export and original source | [10.5281/zenodo.24414400](https://doi.org/10.5281/zenodo.24414400) |
+| This repository, all versions (cite this one) | [10.5281/zenodo.24415504](https://doi.org/10.5281/zenodo.24415504) |
+| This repository, release v1.0 | [10.5281/zenodo.24415505](https://doi.org/10.5281/zenodo.24415505) |
+
 **Summary.** The full project (175 187 modules on top of Mathlib) builds with the official Lean
 toolchain. Its kernel export passes three checks: nanoda, an independent kernel written in Rust; con-leche
 in `--verified` mode; and `con-leche --compare` against a challenge file that imports only official Mathlib.
