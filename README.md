@@ -146,6 +146,15 @@ You need the solution file `main.ndjson` (or `main.ndjson.zst`) from the [large 
 | nanoda | about 80 GB (maximum RSS on the AWS run) | 61 GB | 40 min on 192 vCPU |
 | Rebuilding the project and the export from source | 165 GB or more (the export alone) | well over 1 TB of scratch space with Lake | hours on 192 vCPU |
 
+For the separate check of **grh-lean** ([`grh-lean-lsernau-mini/`](grh-lean-lsernau-mini/#hardware-requirements)),
+the requirements are much smaller. They were measured on the same 16-thread laptop, in WSL2 with 56 GB:
+
+| grh-lean task | RAM | Free disk | Reference time |
+|---|---|---|---|
+| `con-leche --compare` (from the Zenodo files) | 8 GB minimum, 16 GB recommended (peak RSS 4.9 GB) | about 6.5 GB: 5.5 GB for the decompressed `.ndjson` files, plus con-leche | 2 min; building con-leche takes about 11 min |
+| Exports (`lean4export`) | 16 GB minimum, 24 GB recommended (peak RSS 13.7 GB) | 5.5 GB | about 7 min |
+| Rebuilding the project from source (`lake exe cache get` + `lake build`) | 24 GB recommended | about 18 GB | 56 min |
+
 Times depend heavily on the CPU, the power mode and the disk. `main.ndjson` should be on a fast local disk:
 reading it from a slow or network disk (for example a Windows drive seen from WSL) multiplies the time of the
 sha256 step and of con-leche's parsing phase.
