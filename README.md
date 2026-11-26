@@ -12,6 +12,7 @@ Zenodo, [doi:10.5281/zenodo.24414400](https://doi.org/10.5281/zenodo.24414400); 
 | Archived on Zenodo | DOI |
 |---|---|
 | Data: kernel export and original source | [10.5281/zenodo.24414400](https://doi.org/10.5281/zenodo.24414400) |
+| Data: grh-lean (compact edition) kernel export | [10.5281/zenodo.24548259](https://doi.org/10.5281/zenodo.24548259) |
 | This repository, all versions (cite this one) | [10.5281/zenodo.24415504](https://doi.org/10.5281/zenodo.24415504) |
 | This repository, release v1.0 | [10.5281/zenodo.24415505](https://doi.org/10.5281/zenodo.24415505) |
 
@@ -21,6 +22,12 @@ in `--verified` mode; and `con-leche --compare` against a challenge file that im
 The comparison shows that the export proves exactly the five statements below, where `RiemannHypothesis`,
 `riemannZeta`, `DirichletCharacter.LFunction` and everything else in the statements are the unmodified Mathlib
 definitions. The only axioms used are `propext`, `Classical.choice` and `Quot.sound`.
+
+**Also checked: grh-lean.** [`grh-lean-lsernau-mini/`](grh-lean-lsernau-mini/) records the same kind of
+check for [lsernau/grh-lean](https://github.com/lsernau/grh-lean). It is a shorter rewriting of this proof
+(compact edition, about 76,000 lines, Lean v4.35.0), and it proves the same five statements. Its kernel export
+passes `con-leche --verified --compare` and is archived on Zenodo,
+[doi:10.5281/zenodo.24548259](https://doi.org/10.5281/zenodo.24548259).
 
 ## 1. What is claimed
 
@@ -215,6 +222,7 @@ evidence/
   status-page/                   frozen copy of the live build status page (open pagina.html with
                                  status.json next to it) and the progress CSVs
   original-bundle-checksums/     SHA256SUMS of the bundles as produced on AWS
+grh-lean-lsernau-mini/           separate check of lsernau/grh-lean (compact edition); see its README
 ```
 
 Some files (comments in `Challenge.lean`, `check.lean`, `VERSIONES.txt`, the status page and some scripts)
@@ -243,3 +251,7 @@ author of this repository did not write the proof and is not affiliated with its
 This repository contains verification material only: statements, scripts, logs and hashes. That material is
 licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), the same license as the Zenodo
 record. The license does not extend to the proof itself.
+
+The files in `grh-lean-lsernau-mini/statements/` are copied from
+[lsernau/grh-lean](https://github.com/lsernau/grh-lean) and remain under that project's license (Apache
+License 2.0, Copyright 2026 Anthropic, PBC; see the `NOTICE` there).

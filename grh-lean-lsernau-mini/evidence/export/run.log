@@ -1,0 +1,32 @@
+[2026-11-25 23:36:35] lake build Challenge
+warning: src/../Challenge.lean:19:8: declaration uses `sorry`
+Build completed successfully (9049 jobs).
+[2026-11-25 23:37:18] export desafio
+rc=0
+[2026-11-25 23:37:43] export prueba (Main)
+rc=0
+/home/chubakueno/grh-verify/export-challenge.err:	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:24.63
+/home/chubakueno/grh-verify/export-challenge.err:	Maximum resident set size (kbytes): 6902476
+/home/chubakueno/grh-verify/export-main.err:	Elapsed (wall clock) time (h:mm:ss or m:ss): 6:34.71
+/home/chubakueno/grh-verify/export-main.err:	Maximum resident set size (kbytes): 13734416
+-rw-r--r-- 1 chubakueno chubakueno  354906655 Nov 25 23:37 /home/chubakueno/grh-verify/challenge.ndjson
+-rw-r--r-- 1 chubakueno chubakueno 5173283067 Nov 25 23:44 /home/chubakueno/grh-verify/main.ndjson
+36521fa07ed71ed1464c27d5639ffe588f6744cf302f1a4c3a3456aab36ac6b4  /home/chubakueno/grh-verify/challenge.ndjson
+e4e38359ab72d85b9ac058c768ca98c20b0538c9c99e23998e8748fa64b8297a  /home/chubakueno/grh-verify/main.ndjson
+{"meta":{"exporter":{"name":"lean4export","version":"3.1.0"},"format":{"version":"3.1.0"},"lean":{"githash":"eb6cafb7290e8bd5f2937522d8d804f58f02bafc","version":"4.35.0"}}}
+{"in":1,"str":{"pre":0,"str":"Zero"}}
+{"in":2,"str":{"pre":0,"str":"u"}}
+{"il":1,"param":2}
+{"in":3,"str":{"pre":0,"str":"α"}}
+[2026-11-25 23:44:37] con-leche --verified --compare
+con-leche rc=0
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:01.72
+	Maximum resident set size (kbytes): 4862476
+con-leche: accepted 52169 declarations, 5 axioms justified by the solution /home/chubakueno/grh-verify/main.ndjson (204579 declarations accepted) (--verified)
+con-leche: theorem riemannHypothesis justified by the solution
+con-leche: theorem riemannZeta_eq_zero_re justified by the solution
+con-leche: theorem LFunction_ne_zero_of_half_lt_re justified by the solution
+con-leche: theorem LFunction_eq_zero_re justified by the solution
+con-leche: theorem LFunction_eq_zero_re_of_isPrimitive justified by the solution
+con-leche rc=0
+[2026-11-25 23:46:39] FIN
