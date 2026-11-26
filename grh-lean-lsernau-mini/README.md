@@ -90,6 +90,22 @@ Zenodo files are listed in [`zenodo.SHA256SUMS`](zenodo.SHA256SUMS).
 
 ## 5. How to reproduce (Linux or WSL2)
 
+### Hardware requirements
+
+Measured on the run recorded here: 16 threads (i7-13620H), WSL2 Ubuntu with 56 GB of memory.
+
+| Task | RAM | Free disk | Reference time |
+|---|---|---|---|
+| Build (`lake exe cache get` + `lake build`) | **24 GB recommended** (the upstream README's figure for 12 cores). The largest single `lean` process peaked at 9.7 GB RSS; a sample taken late in the build, with 16 `lean` processes running, showed 12 GB in use | about 18 GB: 7.3 GB for Mathlib and its dependencies (from the cache), 7.6 GB of build output, 3.0 GB for the Lean v4.35.0 toolchain | 1.5 min for the cache, 56 min for the build |
+| Exports (`lean4export`) | **16 GB minimum, 24 GB recommended** (peak RSS 13.7 GB for `Main`, 6.9 GB for `Challenge`) | 5.5 GB for `main.ndjson` and `challenge.ndjson` | 6 min 35 s for `Main`, 25 s for `Challenge` |
+| `con-leche --compare` | **8 GB minimum, 16 GB recommended** (peak RSS 4.9 GB) | the two `.ndjson` files (5.5 GB), plus about 1 GB for con-leche and a Lean v4.36.0 toolchain to build it | 2 min 2 s; building con-leche takes about 11 min |
+| Checking from the Zenodo files only (download, `zstd -d`, `con-leche --compare`) | as for `con-leche --compare` | about 6.1 GB: 0.56 GB for the `.zst` files and 5.5 GB decompressed, plus con-leche | a few minutes plus the download |
+
+In short, 32 GB of RAM and 40 GB of free disk are enough for every step, and the whole check takes about
+1 h 10 min on 16 threads. That is much less than for the development in the rest of this repository: its export
+is 61.6 GB and its `--compare` needs at least 48 GB of RAM. Times depend on the CPU, the power mode and the
+disk.
+
 The scripts that were run are in [`scripts/`](scripts/). In short:
 
 ```bash
